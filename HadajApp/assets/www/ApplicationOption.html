@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            ApplicationOption
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:960px;" dsid="ApplicationOption" id="ApplicationOption"
+        class="type-interior" data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="ApplicationOption_mobileheader1" class="ApplicationOption_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    HadajApp
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="ApplicationOption_mobilecontainer1" name="mobilecontainer1"
+            class="ApplicationOption_mobilecontainer1 ui-content" dsid="mobilecontainer1" data-theme="f">
+                <link href="ApplicationOption.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="ApplicationOption.js">
+                </script>
+                <!-- mobileworkarea_10 -->
+                <div class="ApplicationOption_mobileworkarea_10 ApplicationOption_mobileworkarea_10">
+                    <!-- mobilegrid_24 -->
+                    <div class="ApplicationOption_mobilegrid_24_wrapper" data-wrapper-for="mobilegrid_24">
+                        <table id="ApplicationOption_mobilegrid_24" class="ApplicationOption_mobilegrid_24"
+                        dsid="mobilegrid_24" name="mobilegrid_24" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="ApplicationOption_mobilegrid_24_row_0">
+                                <!-- mobilegridcell_25 -->
+                                <td id="ApplicationOption_mobilegridcell_25" name="mobilegridcell_25" class="ApplicationOption_mobilegridcell_25"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilebutton_back --><!--
+                                        --><a data-role="button" name="mobilebutton_back" dsid="mobilebutton_back" class="ApplicationOption_mobilebutton_back"
+                                        id="ApplicationOption_mobilebutton_back" data-corners="true" data-icon="arrow-l"
+                                        data-iconpos="left" x-apple-data-detectors="false" data-inline="true" data-mini="false"
+                                        data-theme="a" tabindex="2">
+                                        Back
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_26 -->
+                                <td id="ApplicationOption_mobilegridcell_26" name="mobilegridcell_26" class="ApplicationOption_mobilegridcell_26"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_29 -->
+                                <td id="ApplicationOption_mobilegridcell_29" name="mobilegridcell_29" class="ApplicationOption_mobilegridcell_29"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilebutton_next --><!--
+                                        --><a data-role="button" name="mobilebutton_next" dsid="mobilebutton_next" class="ApplicationOption_mobilebutton_next"
+                                        id="ApplicationOption_mobilebutton_next" data-corners="true" data-icon="arrow-r"
+                                        data-iconpos="left" x-apple-data-detectors="false" data-inline="true" data-mini="false"
+                                        data-theme="a" tabindex="3">
+                                        Next
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- mobilelabel_11 -->
+                    <div name="mobilelabel_11" id="ApplicationOption_mobilelabel_11" dsid="mobilelabel_11"
+                    data-role="appery_label" class="ApplicationOption_mobilelabel_11">
+                        Do you want to get delivery driver job?
+                    </div>
+                    <!-- mobilegrid_17 -->
+                    <div class="ApplicationOption_mobilegrid_17_wrapper" data-wrapper-for="mobilegrid_17">
+                        <table id="ApplicationOption_mobilegrid_17" class="ApplicationOption_mobilegrid_17"
+                        dsid="mobilegrid_17" name="mobilegrid_17" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="ApplicationOption_mobilegrid_17_row_0">
+                                <!-- mobilegridcell_18 -->
+                                <td id="ApplicationOption_mobilegridcell_18" name="mobilegridcell_18" class="ApplicationOption_mobilegridcell_18"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_19 -->
+                                <td id="ApplicationOption_mobilegridcell_19" name="mobilegridcell_19" class="ApplicationOption_mobilegridcell_19"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobileradiogroup_driver_option -->
+                                        <div data-role="fieldcontain" class="ApplicationOption_mobileradiogroup_driver_option"
+                                        id="ApplicationOption_mobileradiogroup_driver_option" dsid="mobileradiogroup_driver_option">
+                                            <fieldset data-role="controlgroup" data-theme="f">
+                                                <!-- mobileradiobutton_yes -->
+                                                <span dsid="mobileradiobutton_yes" class="ApplicationOption_mobileradiobutton_yes"
+                                                name="mobileradiobutton_yes">
+                                                    <input type="radio" name="mobileradiogroup_driver_option" id="ApplicationOption_mobileradiobutton_yes"
+                                                    checked="checked" tabindex="1" value="Yes" />
+                                                    <label id="ApplicationOption_mobileradiobutton_yes_label" for="ApplicationOption_mobileradiobutton_yes">
+                                                        Yes
+                                                    </label>
+                                                </span>
+                                                <!-- mobileradiobutton_no -->
+                                                <span dsid="mobileradiobutton_no" class="ApplicationOption_mobileradiobutton_no"
+                                                name="mobileradiobutton_no">
+                                                    <input type="radio" name="mobileradiogroup_driver_option" id="ApplicationOption_mobileradiobutton_no"
+                                                    value="No" />
+                                                    <label id="ApplicationOption_mobileradiobutton_no_label" for="ApplicationOption_mobileradiobutton_no">
+                                                        No
+                                                    </label>
+                                                </span>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_22 -->
+                                <td id="ApplicationOption_mobilegridcell_22" name="mobilegridcell_22" class="ApplicationOption_mobilegridcell_22"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="ApplicationOption_mobilefooter1"
+            name="mobilefooter1" dsid="mobilefooter1" id="ApplicationOption_mobilefooter1" data-theme="f">
+                <!-- mobilenavbar_6 -->
+                <div data-role="navbar" id="ApplicationOption_mobilenavbar_6" name="mobilenavbar_6"
+                dsid="mobilenavbar_6" class="ApplicationOption_mobilenavbar_6" data-theme="f" style="position: relative;">
+                    <ul>
+                        <!-- favorite_item -->
+                        <li>
+                            <a data-theme="f" data-icon="star" id="ApplicationOption_favorite_item" dsid="favorite_item"
+                            name="favorite_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- home_item -->
+                        <li>
+                            <a data-theme="f" data-icon="home" id="ApplicationOption_home_item" dsid="home_item"
+                            name="home_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- upload_item -->
+                        <li>
+                            <a data-theme="f" data-icon="action" id="ApplicationOption_upload_item" dsid="upload_item"
+                            name="upload_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

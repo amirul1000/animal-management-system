@@ -1,0 +1,210 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer1 */
+.ui-content.CarriageOrders_mobilecontainer1 {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileworkarea_10*/
+.CarriageOrders_mobileworkarea_10 {
+	background-color: transparent;
+	padding: 0px;
+}
+/* mobilelabel_43 */
+.CarriageOrders_mobilelabel_43 {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegrid_31 */
+.CarriageOrders_mobilegrid_31 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.CarriageOrders_mobilegrid_31_wrapper {
+
+}
+.CarriageOrders_mobilegrid_31 > tr > td {
+	vertical-align: top;
+}
+.CarriageOrders_mobilegrid_31_row_0, .CarriageOrders_mobilegrid_31_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_32 */
+.CarriageOrders_mobilegridcell_32 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.CarriageOrders_mobilegridcell_32 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_back */
+#CarriageOrders_mobilebutton_back {
+
+}
+.ui-btn.CarriageOrders_mobilebutton_back {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_33 */
+.CarriageOrders_mobilegridcell_33 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.CarriageOrders_mobilegridcell_33 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_36 */
+.CarriageOrders_mobilegridcell_36 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.CarriageOrders_mobilegridcell_36 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_new_order */
+#CarriageOrders_mobilebutton_new_order {
+
+}
+.ui-btn.CarriageOrders_mobilebutton_new_order {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_37 */
+.CarriageOrders_mobilegridcell_37 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.CarriageOrders_mobilegridcell_37 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegrid_24 */
+.CarriageOrders_mobilegrid_24 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.CarriageOrders_mobilegrid_24_wrapper {
+
+}
+.CarriageOrders_mobilegrid_24 > tr > td {
+	vertical-align: top;
+}
+.CarriageOrders_mobilegrid_24_row_0, .CarriageOrders_mobilegrid_24_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_25 */
+.CarriageOrders_mobilegridcell_25 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.CarriageOrders_mobilegridcell_25 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_26 */
+.CarriageOrders_mobilegridcell_26 {
+	height:30px !important;
+	width:200px;
+	padding: 2px 2px 2px 2px;
+}
+.CarriageOrders_mobilegridcell_26 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_driver_service_offer */
+#CarriageOrders_mobilebutton_driver_service_offer {
+
+}
+.ui-btn.CarriageOrders_mobilebutton_driver_service_offer {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_29 */
+.CarriageOrders_mobilegridcell_29 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.CarriageOrders_mobilegridcell_29 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_my_orders */
+#CarriageOrders_mobilebutton_my_orders {
+
+}
+.ui-btn.CarriageOrders_mobilebutton_my_orders {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_40 */
+.CarriageOrders_mobilegridcell_40 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.CarriageOrders_mobilegridcell_40 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegrid_41 */
+.CarriageOrders_mobilegrid_41 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.CarriageOrders_mobilegrid_41_wrapper {
+
+}
+.CarriageOrders_mobilegrid_41 > tr > td {
+	vertical-align: top;
+}
+.CarriageOrders_mobilegrid_41_row_0, .CarriageOrders_mobilegrid_41_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_42 */
+.CarriageOrders_mobilegridcell_42 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.CarriageOrders_mobilegridcell_42 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilefooter1 */
+.CarriageOrders_mobilefooter1 {
+	min-height:38px;
+}
+/* mobilenavbar_6 */
+.CarriageOrders_mobilenavbar_6 {
+
+}
+.CarriageOrders_mobilenavbar_6 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .CarriageOrders_mobilenavbar_6 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .CarriageOrders_mobilenavbar_6 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.CarriageOrders_mobilenavbar_6 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

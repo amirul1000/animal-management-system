@@ -1,0 +1,287 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer1 */
+.ui-content.ChooseUserName_mobilecontainer1 {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileworkarea_10*/
+.ChooseUserName_mobileworkarea_10 {
+	background-color: transparent;
+	padding: 0px;
+}
+/* mobilelabel_msg */
+.ChooseUserName_mobilelabel_msg {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #cd2222; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegrid_11 */
+.ChooseUserName_mobilegrid_11 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.ChooseUserName_mobilegrid_11_wrapper {
+
+}
+.ChooseUserName_mobilegrid_11 > tr > td {
+	vertical-align: top;
+}
+.ChooseUserName_mobilegrid_11_row_0, .ChooseUserName_mobilegrid_11_row_0 > td {
+	height: 30px
+}
+.ChooseUserName_mobilegrid_11_row_1, .ChooseUserName_mobilegrid_11_row_1 > td {
+	height: 30px
+}
+/* mobilegridcell_12 */
+.ChooseUserName_mobilegridcell_12 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_12 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_23 */
+.ChooseUserName_mobilelabel_23 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_13 */
+.ChooseUserName_mobilegridcell_13 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_13 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobiletextinput_nike_name */
+.ChooseUserName_mobiletextinput_nike_name {
+	margin: 4px 0px 4px 0px;
+}
+/* mobilegridcell_14 */
+.ChooseUserName_mobilegridcell_14 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_14 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_24 */
+.ChooseUserName_mobilelabel_24 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_15 */
+.ChooseUserName_mobilegridcell_15 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_15 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobiletextinput_username */
+.ChooseUserName_mobiletextinput_username {
+	margin: 4px 0px 4px 0px;
+}
+/* mobilelabel_16 */
+.ChooseUserName_mobilelabel_16 {
+	text-decoration: none; font-weight: normal; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegrid_17 */
+.ChooseUserName_mobilegrid_17 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.ChooseUserName_mobilegrid_17_wrapper {
+
+}
+.ChooseUserName_mobilegrid_17 > tr > td {
+	vertical-align: top;
+}
+.ChooseUserName_mobilegrid_17_row_0, .ChooseUserName_mobilegrid_17_row_0 > td {
+	height: 30px
+}
+.ChooseUserName_mobilegrid_17_row_1, .ChooseUserName_mobilegrid_17_row_1 > td {
+	height: 30px
+}
+/* mobilegridcell_18 */
+.ChooseUserName_mobilegridcell_18 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_18 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_25 */
+.ChooseUserName_mobilelabel_25 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_19 */
+.ChooseUserName_mobilegridcell_19 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_19 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobiletextinput_first_name */
+.ChooseUserName_mobiletextinput_first_name {
+	margin: 4px 0px 4px 0px;
+}
+/* mobilegridcell_20 */
+.ChooseUserName_mobilegridcell_20 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_20 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_26 */
+.ChooseUserName_mobilelabel_26 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_21 */
+.ChooseUserName_mobilegridcell_21 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_21 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobiletextinput_last_name */
+.ChooseUserName_mobiletextinput_last_name {
+	margin: 4px 0px 4px 0px;
+}
+/* mobilegrid_32 */
+.ChooseUserName_mobilegrid_32 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.ChooseUserName_mobilegrid_32_wrapper {
+
+}
+.ChooseUserName_mobilegrid_32 > tr > td {
+	vertical-align: top;
+}
+.ChooseUserName_mobilegrid_32_row_0, .ChooseUserName_mobilegrid_32_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_33 */
+.ChooseUserName_mobilegridcell_33 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_33 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_34 */
+.ChooseUserName_mobilegridcell_34 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_34 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_43 */
+.ChooseUserName_mobilegridcell_43 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_43 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_44 */
+.ChooseUserName_mobilegridcell_44 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_44 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_save */
+#ChooseUserName_mobilebutton_save {
+
+}
+.ui-btn.ChooseUserName_mobilebutton_save {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_45 */
+.ChooseUserName_mobilegridcell_45 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ChooseUserName_mobilegridcell_45 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilefooter1 */
+.ChooseUserName_mobilefooter1 {
+	min-height:38px;
+}
+/* mobilenavbar_6 */
+.ChooseUserName_mobilenavbar_6 {
+
+}
+.ChooseUserName_mobilenavbar_6 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .ChooseUserName_mobilenavbar_6 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .ChooseUserName_mobilenavbar_6 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.ChooseUserName_mobilenavbar_6 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

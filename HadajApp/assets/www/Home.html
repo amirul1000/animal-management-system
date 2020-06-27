@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Home
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:960px;" dsid="Home" id="Home" class="type-interior"
+        data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="Home_mobileheader1" class="Home_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    Home
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="Home_mobilecontainer1" name="mobilecontainer1" class="Home_mobilecontainer1 ui-content"
+            dsid="mobilecontainer1" data-theme="f">
+                <link href="Home.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Home.js">
+                </script>
+                <!-- mobileworkarea_10 -->
+                <div class="Home_mobileworkarea_10 Home_mobileworkarea_10">
+                    <!-- mobilegrid_14 -->
+                    <div class="Home_mobilegrid_14_wrapper" data-wrapper-for="mobilegrid_14">
+                        <table id="Home_mobilegrid_14" class="Home_mobilegrid_14" dsid="mobilegrid_14" name="mobilegrid_14"
+                        cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="Home_mobilegrid_14_row_0">
+                                <!-- mobilegridcell_15 -->
+                                <td id="Home_mobilegridcell_15" name="mobilegridcell_15" class="Home_mobilegridcell_15"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilegrid_23 -->
+                                        <div class="Home_mobilegrid_23_wrapper" data-wrapper-for="mobilegrid_23">
+                                            <table id="Home_mobilegrid_23" class="Home_mobilegrid_23" dsid="mobilegrid_23" name="mobilegrid_23"
+                                            cellpadding=0 cellspacing=0>
+                                                <col style="width:204px;" />
+                                                <col style="width:auto;" />
+                                                <tr class="Home_mobilegrid_23_row_0">
+                                                    <!-- mobilegridcell_24 -->
+                                                    <td id="Home_mobilegridcell_24" name="mobilegridcell_24" class="Home_mobilegridcell_24"
+                                                    colspan=1 rowspan=1>
+                                                        <div class="cell-wrapper">
+                                                            <!-- mobileimage_20 -->
+                                                            <img class="Home_mobileimage_20" src="files/views/assets/image/carrigOrderIcon.jpg"
+                                                            id="Home_mobileimage_20" dsid="mobileimage_20" name="mobileimage_20" />
+                                                            <!-- mobilelabel_19 -->
+                                                            <div name="mobilelabel_19" id="Home_mobilelabel_19" dsid="mobilelabel_19" data-role="appery_label"
+                                                            class="Home_mobilelabel_19">
+                                                                Carriage Order
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <!-- mobilegridcell_25 -->
+                                                    <td id="Home_mobilegridcell_25" name="mobilegridcell_25" class="Home_mobilegridcell_25"
+                                                    colspan=1 rowspan=1>
+                                                        <div class="cell-wrapper">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_69 -->
+                                <td id="Home_mobilegridcell_69" name="mobilegridcell_69" class="Home_mobilegridcell_69"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilegrid_95 -->
+                                        <div class="Home_mobilegrid_95_wrapper" data-wrapper-for="mobilegrid_95">
+                                            <table id="Home_mobilegrid_95" class="Home_mobilegrid_95" dsid="mobilegrid_95" name="mobilegrid_95"
+                                            cellpadding=0 cellspacing=0>
+                                                <col style="width:auto;" />
+                                                <col style="width:54px;" />
+                                                <tr class="Home_mobilegrid_95_row_0">
+                                                    <!-- mobilegridcell_96 -->
+                                                    <td id="Home_mobilegridcell_96" name="mobilegridcell_96" class="Home_mobilegridcell_96"
+                                                    colspan=1 rowspan=1>
+                                                        <div class="cell-wrapper">
+                                                            <!-- mobilesearchbar_user -->
+                                                            <div data-role="fieldcontain" class="Home_mobilesearchbar_user ">
+                                                                <div id="Home_mobilesearchbar_user-cover-div">
+                                                                    <img id="Home_mobilesearchbar_user-cover-img" src="files/resources/image/icon-search-cover.png"
+                                                                    />
+                                                                </div>
+                                                                <input type="search" name="mobilesearchbar_user" id="Home_mobilesearchbar_user"
+                                                                dsid="mobilesearchbar_user" value="" placeholder="Users" data-theme="f" tabindex="9"
+                                                                class="Home_mobilesearchbar_user" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <!-- mobilegridcell_97 -->
+                                                    <td id="Home_mobilegridcell_97" name="mobilegridcell_97" class="Home_mobilegridcell_97"
+                                                    colspan=1 rowspan=1>
+                                                        <div class="cell-wrapper">
+                                                            <!-- mobileimage_100 -->
+                                                            <img class="Home_mobileimage_100" src="files/views/assets/image/qestiIcon.jpg" id="Home_mobileimage_100"
+                                                            dsid="mobileimage_100" name="mobileimage_100" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- mobilegrid_type -->
+                    <div class="Home_mobilegrid_type_wrapper" data-wrapper-for="mobilegrid_type">
+                        <table id="Home_mobilegrid_type" class="Home_mobilegrid_type" dsid="mobilegrid_type"
+                        name="mobilegrid_type" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <tr class="Home_mobilegrid_type_row_0">
+                                <!-- mobilegridcell_166 -->
+                                <td id="Home_mobilegridcell_166" name="mobilegridcell_166" class="Home_mobilegridcell_166"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- mobilegrid_ad -->
+                    <div class="Home_mobilegrid_ad_wrapper" data-wrapper-for="mobilegrid_ad">
+                        <table id="Home_mobilegrid_ad" class="Home_mobilegrid_ad" dsid="mobilegrid_ad" name="mobilegrid_ad"
+                        cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <tr class="Home_mobilegrid_ad_row_0">
+                                <!-- mobilegridcell_158 -->
+                                <td id="Home_mobilegridcell_158" name="mobilegridcell_158" class="Home_mobilegridcell_158"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- infinite_list -->
+                                        <ul data-role="listview" id="Home_infinite_list" class="Home_infinite_list" name="infinite_list"
+                                        dsid="infinite_list" data-inset="true" data-theme="f" data-divider-theme="b" data-count-theme="b"
+                                        style="" data-split-icon="carat-r">
+                                            <!-- infinite_list_item -->
+                                            <li id="Home_infinite_list_item" name="infinite_list_item" dsid="infinite_list_item"
+                                            data-icon="carat-r" class="Home_infinite_list_item  ui-btn-icon-right ui-icon-carat-r">
+                                                <div class="ui-li-static-container">
+                                                    <!-- mobilegrid_108 -->
+                                                    <div class="Home_mobilegrid_108_wrapper" data-wrapper-for="mobilegrid_108">
+                                                        <table id="Home_mobilegrid_108" class="Home_mobilegrid_108" dsid="mobilegrid_108"
+                                                        name="mobilegrid_108" cellpadding=0 cellspacing=0>
+                                                            <col style="width:104px;" />
+                                                            <col style="width:auto;" />
+                                                            <tr class="Home_mobilegrid_108_row_0">
+                                                                <!-- mobilegridcell_109 -->
+                                                                <td id="Home_mobilegridcell_109" name="mobilegridcell_109" class="Home_mobilegridcell_109"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobileimage_113 -->
+                                                                        <img class="img-circle  Home_mobileimage_113" src="files/resources/image/no-image.jpg"
+                                                                        id="Home_mobileimage_113" dsid="mobileimage_113" name="mobileimage_113" />
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_110 -->
+                                                                <td id="Home_mobilegridcell_110" name="mobilegridcell_110" class="Home_mobilegridcell_110"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilegrid_114 -->
+                                                                        <div class="Home_mobilegrid_114_wrapper" data-wrapper-for="mobilegrid_114">
+                                                                            <table id="Home_mobilegrid_114" class="Home_mobilegrid_114" dsid="mobilegrid_114"
+                                                                            name="mobilegrid_114" cellpadding=0 cellspacing=0>
+                                                                                <col style="width:auto;" />
+                                                                                <col style="width:auto;" />
+                                                                                <tr class="Home_mobilegrid_114_row_0">
+                                                                                    <!-- mobilegridcell_115 -->
+                                                                                    <td id="Home_mobilegridcell_115" name="mobilegridcell_115" class="Home_mobilegridcell_115"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilelabel_119 -->
+                                                                                            <div name="mobilelabel_119" id="Home_mobilelabel_119" dsid="mobilelabel_119" data-role="appery_label"
+                                                                                            class="Home_mobilelabel_119">
+                                                                                                info
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <!-- mobilegridcell_163 -->
+                                                                                    <td id="Home_mobilegridcell_163" name="mobilegridcell_163" class="Home_mobilegridcell_163"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilelabel_phone -->
+                                                                                            <div name="mobilelabel_phone" id="Home_mobilelabel_phone" dsid="mobilelabel_phone"
+                                                                                            data-role="appery_label" class="Home_mobilelabel_phone">
+                                                                                                phone
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="Home_mobilegrid_114_row_1">
+                                                                                    <!-- mobilegridcell_117 -->
+                                                                                    <td id="Home_mobilegridcell_117" name="mobilegridcell_117" class="Home_mobilegridcell_117"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilebutton_bid --><!--
+                                                                                            --><a data-role="button" name="mobilebutton_bid" dsid="mobilebutton_bid" class="Home_mobilebutton_bid"
+                                                                                            id="Home_mobilebutton_bid" data-corners="true" data-icon="phone" data-iconpos="left"
+                                                                                            x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="f"
+                                                                                            tabindex="16">
+                                                                                            Bid
+                                                                                            </a><!--
+                                                                                            --><!-- mobilelabel_id -->
+                                                                                            <div name="mobilelabel_id" id="Home_mobilelabel_id" dsid="mobilelabel_id" data-role="appery_label"
+                                                                                            class="Home_mobilelabel_id">
+                                                                                                id
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <!-- mobilegridcell_164 -->
+                                                                                    <td id="Home_mobilegridcell_164" name="mobilegridcell_164" class="Home_mobilegridcell_164"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilelabel_username -->
+                                                                                            <div name="mobilelabel_username" id="Home_mobilelabel_username" dsid="mobilelabel_username"
+                                                                                            data-role="appery_label" class="Home_mobilelabel_username">
+                                                                                                username
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="Home_mobilefooter1" name="mobilefooter1"
+            dsid="mobilefooter1" id="Home_mobilefooter1" data-theme="f">
+                <!-- mobilenavbar_6 -->
+                <div data-role="navbar" id="Home_mobilenavbar_6" name="mobilenavbar_6" dsid="mobilenavbar_6"
+                class="Home_mobilenavbar_6" data-theme="f" style="position: relative;">
+                    <ul>
+                        <!-- favorite_item -->
+                        <li>
+                            <a data-theme="f" class="ui-btn-active ui-state-persist" data-icon="star" id="Home_favorite_item"
+                            dsid="favorite_item" name="favorite_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- home_item -->
+                        <li>
+                            <a data-theme="f" data-icon="home" id="Home_home_item" dsid="home_item" name="home_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- upload_item -->
+                        <li>
+                            <a data-theme="f" data-icon="action" id="Home_upload_item" dsid="upload_item" name="upload_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

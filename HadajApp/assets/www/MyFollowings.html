@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            MyFollowings
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:960px;" dsid="MyFollowings" id="MyFollowings"
+        class="type-interior" data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="MyFollowings_mobileheader1" class="MyFollowings_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    HadajApp
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="MyFollowings_mobilecontainer1" name="mobilecontainer1"
+            class="MyFollowings_mobilecontainer1 ui-content" dsid="mobilecontainer1" data-theme="f">
+                <link href="MyFollowings.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="MyFollowings.js">
+                </script>
+                <!-- mobileworkarea_10 -->
+                <div class="MyFollowings_mobileworkarea_10 MyFollowings_mobileworkarea_10">
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="MyFollowings_mobilefooter1"
+            name="mobilefooter1" dsid="mobilefooter1" id="MyFollowings_mobilefooter1" data-theme="f">
+                <!-- mobilenavbar_6 -->
+                <div data-role="navbar" id="MyFollowings_mobilenavbar_6" name="mobilenavbar_6" dsid="mobilenavbar_6"
+                class="MyFollowings_mobilenavbar_6" data-theme="f" style="position: relative;">
+                    <ul>
+                        <!-- favorite_item -->
+                        <li>
+                            <a data-theme="f" data-icon="star" id="MyFollowings_favorite_item" dsid="favorite_item"
+                            name="favorite_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- home_item -->
+                        <li>
+                            <a data-theme="f" data-icon="home" id="MyFollowings_home_item" dsid="home_item"
+                            name="home_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- upload_item -->
+                        <li>
+                            <a data-theme="f" data-icon="action" id="MyFollowings_upload_item" dsid="upload_item"
+                            name="upload_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,75 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer1 */
+.ui-content.TermsServices_mobilecontainer1 {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileworkarea_10*/
+.TermsServices_mobileworkarea_10 {
+	background-color: transparent;
+	padding: 0px;
+}
+/* mobilebutton_back2 */
+#TermsServices_mobilebutton_back2 {
+
+}
+.ui-btn.TermsServices_mobilebutton_back2 {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegrid_term */
+.TermsServices_mobilegrid_term {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.TermsServices_mobilegrid_term_wrapper {
+
+}
+.TermsServices_mobilegrid_term > tr > td {
+	vertical-align: top;
+}
+.TermsServices_mobilegrid_term_row_0, .TermsServices_mobilegrid_term_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_13 */
+.TermsServices_mobilegridcell_13 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.TermsServices_mobilegridcell_13 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_termservice */
+.TermsServices_mobilelabel_termservice {
+	text-decoration: none; font-weight: normal; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilefooter1 */
+.TermsServices_mobilefooter1 {
+	min-height:38px;
+}
+/* mobilenavbar_6 */
+.TermsServices_mobilenavbar_6 {
+
+}
+.TermsServices_mobilenavbar_6 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .TermsServices_mobilenavbar_6 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .TermsServices_mobilenavbar_6 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.TermsServices_mobilenavbar_6 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

@@ -1,0 +1,110 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer */
+.ui-content.PhoneConfirm_mobilecontainer {
+	padding: 15px 15px 15px 15px;
+}
+/* mobilelabel_2 */
+.PhoneConfirm_mobilelabel_2 {
+	text-decoration: none; font-weight: bold; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* spacer_4 */
+.PhoneConfirm_spacer_4 {
+	width: 100%; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* spacer_5 */
+.PhoneConfirm_spacer_5 {
+	width: 100%; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* mobilelabel_phone_no */
+.PhoneConfirm_mobilelabel_phone_no {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* spacer_6 */
+.PhoneConfirm_spacer_6 {
+	width: 100%; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* spacer_7 */
+.PhoneConfirm_spacer_7 {
+	width: 100%; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* spacer_8 */
+.PhoneConfirm_spacer_8 {
+	width: 100%; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* mobilelabel_9 */
+.PhoneConfirm_mobilelabel_9 {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegrid_10 */
+.PhoneConfirm_mobilegrid_10 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.PhoneConfirm_mobilegrid_10_wrapper {
+
+}
+.PhoneConfirm_mobilegrid_10 > tr > td {
+	vertical-align: top;
+}
+.PhoneConfirm_mobilegrid_10_row_0, .PhoneConfirm_mobilegrid_10_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_11 */
+.PhoneConfirm_mobilegridcell_11 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.PhoneConfirm_mobilegridcell_11 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_edit */
+#PhoneConfirm_mobilebutton_edit {
+
+}
+.ui-btn.PhoneConfirm_mobilebutton_edit {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_15 */
+.PhoneConfirm_mobilegridcell_15 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.PhoneConfirm_mobilegridcell_15 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_yes */
+#PhoneConfirm_mobilebutton_yes {
+
+}
+.ui-btn.PhoneConfirm_mobilebutton_yes {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilefooter */
+.PhoneConfirm_mobilefooter {
+	min-height:38px;
+}

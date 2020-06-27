@@ -1,0 +1,60 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer1 */
+.ui-content.Account_mobilecontainer1 {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileworkarea_10*/
+.Account_mobileworkarea_10 {
+	background-color: transparent;
+	padding: 0px;
+}
+/* mobilelabel_msg */
+.Account_mobilelabel_msg {
+	text-decoration: none; font-weight: normal; color: #c72929; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobiletextinput_phone */
+.Account_mobiletextinput_phone {
+	margin: 4px 0px 4px 0px;
+}
+/* mobilebutton_login */
+#Account_mobilebutton_login {
+
+}
+.ui-btn.Account_mobilebutton_login {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilebutton_register */
+#Account_mobilebutton_register {
+
+}
+.ui-btn.Account_mobilebutton_register {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilefooter1 */
+.Account_mobilefooter1 {
+	min-height:38px;
+}
+/* mobilenavbar_6 */
+.Account_mobilenavbar_6 {
+
+}
+.Account_mobilenavbar_6 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .Account_mobilenavbar_6 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .Account_mobilenavbar_6 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.Account_mobilenavbar_6 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

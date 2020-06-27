@@ -1,0 +1,34 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer1 */
+.ui-content.MyFollowers_mobilecontainer1 {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileworkarea_10*/
+.MyFollowers_mobileworkarea_10 {
+	background-color: transparent;
+	padding: 0px;
+}
+/* mobilefooter1 */
+.MyFollowers_mobilefooter1 {
+	min-height:38px;
+}
+/* mobilenavbar_6 */
+.MyFollowers_mobilenavbar_6 {
+
+}
+.MyFollowers_mobilenavbar_6 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .MyFollowers_mobilenavbar_6 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .MyFollowers_mobilenavbar_6 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.MyFollowers_mobilenavbar_6 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

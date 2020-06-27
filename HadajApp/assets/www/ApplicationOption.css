@@ -1,0 +1,163 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer1 */
+.ui-content.ApplicationOption_mobilecontainer1 {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileworkarea_10*/
+.ApplicationOption_mobileworkarea_10 {
+	background-color: transparent;
+	padding: 0px;
+}
+/* mobilegrid_24 */
+.ApplicationOption_mobilegrid_24 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.ApplicationOption_mobilegrid_24_wrapper {
+
+}
+.ApplicationOption_mobilegrid_24 > tr > td {
+	vertical-align: top;
+}
+.ApplicationOption_mobilegrid_24_row_0, .ApplicationOption_mobilegrid_24_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_25 */
+.ApplicationOption_mobilegridcell_25 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ApplicationOption_mobilegridcell_25 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_back */
+#ApplicationOption_mobilebutton_back {
+
+}
+.ui-btn.ApplicationOption_mobilebutton_back {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_26 */
+.ApplicationOption_mobilegridcell_26 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ApplicationOption_mobilegridcell_26 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_29 */
+.ApplicationOption_mobilegridcell_29 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ApplicationOption_mobilegridcell_29 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_next */
+#ApplicationOption_mobilebutton_next {
+
+}
+.ui-btn.ApplicationOption_mobilebutton_next {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilelabel_11 */
+.ApplicationOption_mobilelabel_11 {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegrid_17 */
+.ApplicationOption_mobilegrid_17 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.ApplicationOption_mobilegrid_17_wrapper {
+
+}
+.ApplicationOption_mobilegrid_17 > tr > td {
+	vertical-align: top;
+}
+.ApplicationOption_mobilegrid_17_row_0, .ApplicationOption_mobilegrid_17_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_18 */
+.ApplicationOption_mobilegridcell_18 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ApplicationOption_mobilegridcell_18 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_19 */
+.ApplicationOption_mobilegridcell_19 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ApplicationOption_mobilegridcell_19 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobileradiogroup_driver_option */
+.ApplicationOption_mobileradiogroup_driver_option {
+	margin: 4px 0px 4px 0px;
+}
+/* mobileradiobutton_yes */
+.ApplicationOption_mobileradiobutton_yes {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobileradiobutton_no */
+.ApplicationOption_mobileradiobutton_no {
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+/* mobilegridcell_22 */
+.ApplicationOption_mobilegridcell_22 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.ApplicationOption_mobilegridcell_22 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilefooter1 */
+.ApplicationOption_mobilefooter1 {
+	min-height:38px;
+}
+/* mobilenavbar_6 */
+.ApplicationOption_mobilenavbar_6 {
+
+}
+.ApplicationOption_mobilenavbar_6 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .ApplicationOption_mobilenavbar_6 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .ApplicationOption_mobilenavbar_6 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.ApplicationOption_mobilenavbar_6 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

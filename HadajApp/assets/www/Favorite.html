@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Favorite
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:960px;" dsid="Favorite" id="Favorite" class="type-interior"
+        data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="Favorite_mobileheader1" class="Favorite_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    HadajApp
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="Favorite_mobilecontainer1" name="mobilecontainer1"
+            class="Favorite_mobilecontainer1 ui-content" dsid="mobilecontainer1" data-theme="f">
+                <link href="Favorite.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Favorite.js">
+                </script>
+                <!-- mobileworkarea_10 -->
+                <div class="Favorite_mobileworkarea_10 Favorite_mobileworkarea_10">
+                    <!-- mobilelabel_87 -->
+                    <div name="mobilelabel_87" id="Favorite_mobilelabel_87" dsid="mobilelabel_87" data-role="appery_label"
+                    class="Favorite_mobilelabel_87">
+                        Favorite
+                    </div>
+                    <!-- mobilegrid_20 -->
+                    <div class="Favorite_mobilegrid_20_wrapper" data-wrapper-for="mobilegrid_20">
+                        <table id="Favorite_mobilegrid_20" class="Favorite_mobilegrid_20" dsid="mobilegrid_20"
+                        name="mobilegrid_20" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="Favorite_mobilegrid_20_row_0">
+                                <!-- mobilegridcell_21 -->
+                                <td id="Favorite_mobilegridcell_21" name="mobilegridcell_21" class="Favorite_mobilegridcell_21"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilebutton_profile --><!--
+                                        --><a data-role="button" name="mobilebutton_profile" dsid="mobilebutton_profile" class="Favorite_mobilebutton_profile"
+                                        id="Favorite_mobilebutton_profile" data-corners="true" data-icon="user" data-iconpos="left"
+                                        x-apple-data-detectors="false" data-mini="false" data-theme="a" tabindex="8">
+                                        Profile
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_25 -->
+                                <td id="Favorite_mobilegridcell_25" name="mobilegridcell_25" class="Favorite_mobilegridcell_25"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilebutton_add_group --><!--
+                                        --><a data-role="button" name="mobilebutton_add_group" dsid="mobilebutton_add_group"
+                                        class="Favorite_mobilebutton_add_group" id="Favorite_mobilebutton_add_group" data-corners="true"
+                                        data-icon="plus" data-iconpos="left" x-apple-data-detectors="false" data-mini="false"
+                                        data-theme="a" tabindex="9">
+                                        Add Group
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- mobilegrid_favorite -->
+                    <div class="Favorite_mobilegrid_favorite_wrapper" data-wrapper-for="mobilegrid_favorite">
+                        <table id="Favorite_mobilegrid_favorite" class="Favorite_mobilegrid_favorite" dsid="mobilegrid_favorite"
+                        name="mobilegrid_favorite" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <tr class="Favorite_mobilegrid_favorite_row_0">
+                                <!-- mobilegridcell_27 -->
+                                <td id="Favorite_mobilegridcell_27" name="mobilegridcell_27" class="Favorite_mobilegridcell_27"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelist_45 -->
+                                        <ul data-role="listview" id="Favorite_mobilelist_45" class="Favorite_mobilelist_45"
+                                        name="mobilelist_45" dsid="mobilelist_45" data-inset="true" data-theme="f" data-divider-theme="b"
+                                        data-count-theme="b" style="" data-split-icon="carat-r">
+                                            <!-- mobilelistitem_favorite -->
+                                            <li id="Favorite_mobilelistitem_favorite" name="mobilelistitem_favorite" dsid="mobilelistitem_favorite"
+                                            data-icon="carat-r" class="Favorite_mobilelistitem_favorite  ui-btn-icon-right ui-icon-carat-r">
+                                                <div class="ui-li-static-container">
+                                                    <!-- mobilegrid_54 -->
+                                                    <div class="Favorite_mobilegrid_54_wrapper" data-wrapper-for="mobilegrid_54">
+                                                        <table id="Favorite_mobilegrid_54" class="Favorite_mobilegrid_54" dsid="mobilegrid_54"
+                                                        name="mobilegrid_54" cellpadding=0 cellspacing=0>
+                                                            <col style="width:104px;" />
+                                                            <col style="width:auto;" />
+                                                            <tr class="Favorite_mobilegrid_54_row_0">
+                                                                <!-- mobilegridcell_55 -->
+                                                                <td id="Favorite_mobilegridcell_55" name="mobilegridcell_55" class="Favorite_mobilegridcell_55"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobileimage_last_ad_img -->
+                                                                        <img class="img-circle  Favorite_mobileimage_last_ad_img" src="files/resources/image/no-image.jpg"
+                                                                        id="Favorite_mobileimage_last_ad_img" dsid="mobileimage_last_ad_img" name="mobileimage_last_ad_img"
+                                                                        />
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_67 -->
+                                                                <td id="Favorite_mobilegridcell_67" name="mobilegridcell_67" class="Favorite_mobilegridcell_67"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilegrid_80 -->
+                                                                        <div class="Favorite_mobilegrid_80_wrapper" data-wrapper-for="mobilegrid_80">
+                                                                            <table id="Favorite_mobilegrid_80" class="Favorite_mobilegrid_80" dsid="mobilegrid_80"
+                                                                            name="mobilegrid_80" cellpadding=0 cellspacing=0>
+                                                                                <col style="width:auto;" />
+                                                                                <col style="width:auto;" />
+                                                                                <col style="width:auto;" />
+                                                                                <tr class="Favorite_mobilegrid_80_row_0">
+                                                                                    <!-- mobilegridcell_81 -->
+                                                                                    <td id="Favorite_mobilegridcell_81" name="mobilegridcell_81" class="Favorite_mobilegridcell_81"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilelabel_type -->
+                                                                                            <div name="mobilelabel_type" id="Favorite_mobilelabel_type" dsid="mobilelabel_type"
+                                                                                            data-role="appery_label" class="Favorite_mobilelabel_type">
+                                                                                                Type
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <!-- mobilegridcell_82 -->
+                                                                                    <td id="Favorite_mobilegridcell_82" name="mobilegridcell_82" class="Favorite_mobilegridcell_82"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilelabel_breed -->
+                                                                                            <div name="mobilelabel_breed" id="Favorite_mobilelabel_breed" dsid="mobilelabel_breed"
+                                                                                            data-role="appery_label" class="Favorite_mobilelabel_breed">
+                                                                                                Breed
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <!-- mobilegridcell_85 -->
+                                                                                    <td id="Favorite_mobilegridcell_85" name="mobilegridcell_85" class="Favorite_mobilegridcell_85"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilelabel_slaughter -->
+                                                                                            <div name="mobilelabel_slaughter" id="Favorite_mobilelabel_slaughter" dsid="mobilelabel_slaughter"
+                                                                                            data-role="appery_label" class="Favorite_mobilelabel_slaughter">
+                                                                                                Slaughter
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="Favorite_mobilegrid_80_row_1">
+                                                                                    <!-- mobilegridcell_83 -->
+                                                                                    <td id="Favorite_mobilegridcell_83" name="mobilegridcell_83" class="Favorite_mobilegridcell_83"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilelabel_contry -->
+                                                                                            <div name="mobilelabel_contry" id="Favorite_mobilelabel_contry" dsid="mobilelabel_contry"
+                                                                                            data-role="appery_label" class="Favorite_mobilelabel_contry">
+                                                                                                Contry
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <!-- mobilegridcell_84 -->
+                                                                                    <td id="Favorite_mobilegridcell_84" name="mobilegridcell_84" class="Favorite_mobilegridcell_84"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilelabel_city -->
+                                                                                            <div name="mobilelabel_city" id="Favorite_mobilelabel_city" dsid="mobilelabel_city"
+                                                                                            data-role="appery_label" class="Favorite_mobilelabel_city">
+                                                                                                City
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <!-- mobilegridcell_86 -->
+                                                                                    <td id="Favorite_mobilegridcell_86" name="mobilegridcell_86" class="Favorite_mobilegridcell_86"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="Favorite_mobilegrid_54_row_1">
+                                                                <!-- mobilegridcell_57 -->
+                                                                <td id="Favorite_mobilegridcell_57" name="mobilegridcell_57" class="Favorite_mobilegridcell_57"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_last_ad_id -->
+                                                                        <div name="mobilelabel_last_ad_id" id="Favorite_mobilelabel_last_ad_id" dsid="mobilelabel_last_ad_id"
+                                                                        data-role="appery_label" class="Favorite_mobilelabel_last_ad_id">
+                                                                            last_ad_id
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_68 -->
+                                                                <td id="Favorite_mobilegridcell_68" name="mobilegridcell_68" class="Favorite_mobilegridcell_68"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilegrid_69 -->
+                                                                        <div class="Favorite_mobilegrid_69_wrapper" data-wrapper-for="mobilegrid_69">
+                                                                            <table id="Favorite_mobilegrid_69" class="Favorite_mobilegrid_69" dsid="mobilegrid_69"
+                                                                            name="mobilegrid_69" cellpadding=0 cellspacing=0>
+                                                                                <col style="width:auto;" />
+                                                                                <col style="width:auto;" />
+                                                                                <tr class="Favorite_mobilegrid_69_row_0">
+                                                                                    <!-- mobilegridcell_70 -->
+                                                                                    <td id="Favorite_mobilegridcell_70" name="mobilegridcell_70" class="Favorite_mobilegridcell_70"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilebutton_delete --><!--
+                                                                                            --><a data-role="button" name="mobilebutton_delete" dsid="mobilebutton_delete" class="Favorite_mobilebutton_delete"
+                                                                                            id="Favorite_mobilebutton_delete" data-corners="true" data-icon="delete" data-iconpos="left"
+                                                                                            x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="d"
+                                                                                            tabindex="16">
+                                                                                            Delete
+                                                                                            </a><!--
+                                                                                            --><!-- mobilelabel_favorite_id -->
+                                                                                            <div name="mobilelabel_favorite_id" id="Favorite_mobilelabel_favorite_id" dsid="mobilelabel_favorite_id"
+                                                                                            data-role="appery_label" class="Favorite_mobilelabel_favorite_id">
+                                                                                                id
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <!-- mobilegridcell_74 -->
+                                                                                    <td id="Favorite_mobilegridcell_74" name="mobilegridcell_74" class="Favorite_mobilegridcell_74"
+                                                                                    colspan=1 rowspan=1>
+                                                                                        <div class="cell-wrapper">
+                                                                                            <!-- mobilebutton_details --><!--
+                                                                                            --><a data-role="button" name="mobilebutton_details" dsid="mobilebutton_details" class="Favorite_mobilebutton_details"
+                                                                                            id="Favorite_mobilebutton_details" data-corners="true" data-icon="grid" data-iconpos="left"
+                                                                                            x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="b"
+                                                                                            tabindex="17">
+                                                                                            Details
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="Favorite_mobilefooter1" name="mobilefooter1"
+            dsid="mobilefooter1" id="Favorite_mobilefooter1" data-theme="f">
+                <!-- mobilenavbar_6 -->
+                <div data-role="navbar" id="Favorite_mobilenavbar_6" name="mobilenavbar_6" dsid="mobilenavbar_6"
+                class="Favorite_mobilenavbar_6" data-theme="f" style="position: relative;">
+                    <ul>
+                        <!-- favorite_item -->
+                        <li>
+                            <a data-theme="f" data-icon="star" id="Favorite_favorite_item" dsid="favorite_item"
+                            name="favorite_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- home_item -->
+                        <li>
+                            <a data-theme="f" data-icon="home" id="Favorite_home_item" dsid="home_item" name="home_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- upload_item -->
+                        <li>
+                            <a data-theme="f" data-icon="action" id="Favorite_upload_item" dsid="upload_item"
+                            name="upload_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

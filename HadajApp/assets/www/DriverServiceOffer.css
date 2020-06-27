@@ -1,0 +1,188 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer1 */
+.ui-content.DriverServiceOffer_mobilecontainer1 {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileworkarea_10*/
+.DriverServiceOffer_mobileworkarea_10 {
+	background-color: transparent;
+	padding: 0px;
+}
+/* mobilelabel_11 */
+.DriverServiceOffer_mobilelabel_11 {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilebutton_back */
+#DriverServiceOffer_mobilebutton_back {
+
+}
+.ui-btn.DriverServiceOffer_mobilebutton_back {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilelist_12 */
+.ui-page .DriverServiceOffer_mobilelist_12 {
+	margin: 4px 0px 0px 0px;
+}
+/* mobilelistitem_favorite */
+.ui-mobile-viewport ul[data-role="listview"] li.DriverServiceOffer_mobilelistitem_favorite {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.DriverServiceOffer_mobilelistitem_favorite .ui-li-static-container {
+	padding: 0px 0px 4px 0px;
+	padding-right: 41px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.DriverServiceOffer_mobilelistitem_favorite.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* mobilelistitembutton_14 */
+.DriverServiceOffer_mobilelistitembutton_14 {
+
+}
+/* mobilegrid_19 */
+.DriverServiceOffer_mobilegrid_19 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.DriverServiceOffer_mobilegrid_19_wrapper {
+
+}
+.DriverServiceOffer_mobilegrid_19 > tr > td {
+	vertical-align: top;
+}
+.DriverServiceOffer_mobilegrid_19_row_0, .DriverServiceOffer_mobilegrid_19_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_20 */
+.DriverServiceOffer_mobilegridcell_20 {
+	height:30px !important;
+	width:100px;
+	padding: 2px 2px 2px 2px;
+}
+.DriverServiceOffer_mobilegridcell_20 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobileimage_24 */
+.DriverServiceOffer_mobileimage_24 {
+	margin: 4px 0px 4px 0px;
+	width: 100px; height: 100px;
+	display: block;
+}
+/* mobilegridcell_21 */
+.DriverServiceOffer_mobilegridcell_21 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.DriverServiceOffer_mobilegridcell_21 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegrid_25 */
+.DriverServiceOffer_mobilegrid_25 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.DriverServiceOffer_mobilegrid_25_wrapper {
+
+}
+.DriverServiceOffer_mobilegrid_25 > tr > td {
+	vertical-align: top;
+}
+.DriverServiceOffer_mobilegrid_25_row_0, .DriverServiceOffer_mobilegrid_25_row_0 > td {
+	height: 30px
+}
+.DriverServiceOffer_mobilegrid_25_row_1, .DriverServiceOffer_mobilegrid_25_row_1 > td {
+	height: 30px
+}
+.DriverServiceOffer_mobilegrid_25_row_2, .DriverServiceOffer_mobilegrid_25_row_2 > td {
+	height: 30px
+}
+/* mobilegridcell_26 */
+.DriverServiceOffer_mobilegridcell_26 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.DriverServiceOffer_mobilegridcell_26 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_info */
+.DriverServiceOffer_mobilelabel_info {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_28 */
+.DriverServiceOffer_mobilegridcell_28 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.DriverServiceOffer_mobilegridcell_28 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_posted_date_time */
+.DriverServiceOffer_mobilelabel_posted_date_time {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_32 */
+.DriverServiceOffer_mobilegridcell_32 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.DriverServiceOffer_mobilegridcell_32 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_contact */
+#DriverServiceOffer_mobilebutton_contact {
+
+}
+.ui-btn.DriverServiceOffer_mobilebutton_contact {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilefooter1 */
+.DriverServiceOffer_mobilefooter1 {
+	min-height:38px;
+}
+/* mobilenavbar_6 */
+.DriverServiceOffer_mobilenavbar_6 {
+
+}
+.DriverServiceOffer_mobilenavbar_6 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .DriverServiceOffer_mobilenavbar_6 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .DriverServiceOffer_mobilenavbar_6 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.DriverServiceOffer_mobilenavbar_6 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

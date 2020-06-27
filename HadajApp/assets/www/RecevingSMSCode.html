@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            RecevingSMSCode
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:960px;" dsid="RecevingSMSCode" id="RecevingSMSCode"
+        class="type-interior" data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="RecevingSMSCode_mobileheader1" class="RecevingSMSCode_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    HadajApp
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="RecevingSMSCode_mobilecontainer1" name="mobilecontainer1"
+            class="RecevingSMSCode_mobilecontainer1 ui-content" dsid="mobilecontainer1" data-theme="f">
+                <link href="RecevingSMSCode.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="RecevingSMSCode.js">
+                </script>
+                <!-- mobileworkarea_10 -->
+                <div class="RecevingSMSCode_mobileworkarea_10 RecevingSMSCode_mobileworkarea_10">
+                    <!-- mobilebutton_edit --><!--
+                    --><a data-role="button" name="mobilebutton_edit" dsid="mobilebutton_edit" class="RecevingSMSCode_mobilebutton_edit"
+                    id="RecevingSMSCode_mobilebutton_edit" data-corners="true" data-icon="edit" data-iconpos="left"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="a"
+                    tabindex="1">
+                    Edit
+                    </a><!--
+                    --><!-- mobilelabel_msg -->
+                    <div name="mobilelabel_msg" id="RecevingSMSCode_mobilelabel_msg" dsid="mobilelabel_msg"
+                    data-role="appery_label" class="RecevingSMSCode_mobilelabel_msg">
+                        Label
+                    </div>
+                    <!-- spacer_13 -->
+                    <div id="RecevingSMSCode_spacer_13" data-role="appery_spacer" dsid="spacer_13" class='mobilespacer RecevingSMSCode_spacer_13'>
+                    </div>
+                    <!-- mobilelabel_12 -->
+                    <div name="mobilelabel_12" id="RecevingSMSCode_mobilelabel_12" dsid="mobilelabel_12"
+                    data-role="appery_label" class="RecevingSMSCode_mobilelabel_12">
+                        We have sent you as SMS with a code to the number above. To complete your phone
+                        verification ,please enter activation code
+                    </div>
+                    <!-- spacer_14 -->
+                    <div id="RecevingSMSCode_spacer_14" data-role="appery_spacer" dsid="spacer_14" class='mobilespacer RecevingSMSCode_spacer_14'>
+                    </div>
+                    <!-- mobiletextinput_activation_code -->
+                    <div data-role="fieldcontain" class="RecevingSMSCode_mobiletextinput_activation_code ">
+                        <input type="text" name="mobiletextinput_activation_code" dsid="mobiletextinput_activation_code"
+                        value="" placeholder="Activation Code" id="RecevingSMSCode_mobiletextinput_activation_code"
+                        tabindex="2" multiple data-theme="f" class="RecevingSMSCode_mobiletextinput_activation_code"
+                        />
+                    </div>
+                    <!-- spacer_16 -->
+                    <div id="RecevingSMSCode_spacer_16" data-role="appery_spacer" dsid="spacer_16" class='mobilespacer RecevingSMSCode_spacer_16'>
+                    </div>
+                    <!-- mobilegrid_18 -->
+                    <div class="RecevingSMSCode_mobilegrid_18_wrapper" data-wrapper-for="mobilegrid_18">
+                        <table id="RecevingSMSCode_mobilegrid_18" class="RecevingSMSCode_mobilegrid_18"
+                        dsid="mobilegrid_18" name="mobilegrid_18" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="RecevingSMSCode_mobilegrid_18_row_0">
+                                <!-- mobilegridcell_19 -->
+                                <td id="RecevingSMSCode_mobilegridcell_19" name="mobilegridcell_19" class="RecevingSMSCode_mobilegridcell_19"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_20 -->
+                                <td id="RecevingSMSCode_mobilegridcell_20" name="mobilegridcell_20" class="RecevingSMSCode_mobilegridcell_20"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_25 -->
+                                <td id="RecevingSMSCode_mobilegridcell_25" name="mobilegridcell_25" class="RecevingSMSCode_mobilegridcell_25"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_28 -->
+                                <td id="RecevingSMSCode_mobilegridcell_28" name="mobilegridcell_28" class="RecevingSMSCode_mobilegridcell_28"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilebutton_done --><!--
+                                        --><a data-role="button" name="mobilebutton_done" dsid="mobilebutton_done" class="RecevingSMSCode_mobilebutton_done"
+                                        id="RecevingSMSCode_mobilebutton_done" data-corners="true" data-icon="check" data-iconpos="left"
+                                        x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="a"
+                                        tabindex="3">
+                                        Done
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_29 -->
+                                <td id="RecevingSMSCode_mobilegridcell_29" name="mobilegridcell_29" class="RecevingSMSCode_mobilegridcell_29"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_30 -->
+                                <td id="RecevingSMSCode_mobilegridcell_30" name="mobilegridcell_30" class="RecevingSMSCode_mobilegridcell_30"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_31 -->
+                                <td id="RecevingSMSCode_mobilegridcell_31" name="mobilegridcell_31" class="RecevingSMSCode_mobilegridcell_31"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="RecevingSMSCode_mobilefooter1"
+            name="mobilefooter1" dsid="mobilefooter1" id="RecevingSMSCode_mobilefooter1" data-theme="f">
+                <!-- mobilenavbar_6 -->
+                <div data-role="navbar" id="RecevingSMSCode_mobilenavbar_6" name="mobilenavbar_6"
+                dsid="mobilenavbar_6" class="RecevingSMSCode_mobilenavbar_6" data-theme="f" style="position: relative;">
+                    <ul>
+                        <!-- favorite_item -->
+                        <li>
+                            <a data-theme="f" data-icon="star" id="RecevingSMSCode_favorite_item" dsid="favorite_item"
+                            name="favorite_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- home_item -->
+                        <li>
+                            <a data-theme="f" data-icon="home" id="RecevingSMSCode_home_item" dsid="home_item"
+                            name="home_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- upload_item -->
+                        <li>
+                            <a data-theme="f" data-icon="action" id="RecevingSMSCode_upload_item" dsid="upload_item"
+                            name="upload_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

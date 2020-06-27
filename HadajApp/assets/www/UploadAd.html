@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            UploadAd
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:960px;" dsid="UploadAd" id="UploadAd" class="type-interior"
+        data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="UploadAd_mobileheader1" class="UploadAd_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    Caption
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="UploadAd_mobilecontainer1" name="mobilecontainer1"
+            class="UploadAd_mobilecontainer1 ui-content" dsid="mobilecontainer1" data-theme="f">
+                <link href="UploadAd.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="UploadAd.js">
+                </script>
+                <!-- mobileworkarea_10 -->
+                <div class="UploadAd_mobileworkarea_10 UploadAd_mobileworkarea_10">
+                    <!-- mobilelabel_82 -->
+                    <div name="mobilelabel_82" id="UploadAd_mobilelabel_82" dsid="mobilelabel_82" data-role="appery_label"
+                    class="UploadAd_mobilelabel_82">
+                        UploadAd
+                    </div>
+                    <!-- mobilebutton_81 --><!--
+                    --><a data-role="button" name="mobilebutton_81" dsid="mobilebutton_81" class="UploadAd_mobilebutton_81"
+                    id="UploadAd_mobilebutton_81" data-corners="true" data-icon="arrow-l" data-iconpos="left"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="a"
+                    tabindex="18">
+                    Back
+                    </a><!--
+                    --><!-- mobilelabel_type -->
+                    <div name="mobilelabel_type" id="UploadAd_mobilelabel_type" dsid="mobilelabel_type"
+                    data-role="appery_label" class="UploadAd_mobilelabel_type">
+                        Type
+                    </div>
+                    <!-- mobilelabel_error -->
+                    <div name="mobilelabel_error" id="UploadAd_mobilelabel_error" dsid="mobilelabel_error"
+                    data-role="appery_label" class="UploadAd_mobilelabel_error">
+                        Error
+                    </div>
+                    <!-- mobilegrid_uploadad -->
+                    <div class="UploadAd_mobilegrid_uploadad_wrapper" data-wrapper-for="mobilegrid_uploadad">
+                        <table id="UploadAd_mobilegrid_uploadad" class="UploadAd_mobilegrid_uploadad" dsid="mobilegrid_uploadad"
+                        name="mobilegrid_uploadad" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:34px;" />
+                            <col style="width:auto;" />
+                            <tr class="UploadAd_mobilegrid_uploadad_row_0">
+                                <!-- mobilegridcell_12 -->
+                                <td id="UploadAd_mobilegridcell_12" name="mobilegridcell_12" class="UploadAd_mobilegridcell_12"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_13 -->
+                                <td id="UploadAd_mobilegridcell_13" name="mobilegridcell_13" class="UploadAd_mobilegridcell_13"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_16 -->
+                                <td id="UploadAd_mobilegridcell_16" name="mobilegridcell_16" class="UploadAd_mobilegridcell_16"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="UploadAd_mobilegrid_uploadad_row_1">
+                                <!-- mobilegridcell_14 -->
+                                <td id="UploadAd_mobilegridcell_14" name="mobilegridcell_14" class="UploadAd_mobilegridcell_14"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_77 -->
+                                        <div name="mobilelabel_77" id="UploadAd_mobilelabel_77" dsid="mobilelabel_77" data-role="appery_label"
+                                        class="UploadAd_mobilelabel_77">
+                                            Video
+                                        </div>
+                                        <!-- mobiletextinput_video -->
+                                        <div data-role="fieldcontain" class="UploadAd_mobiletextinput_video ">
+                                            <input type="file" name="mobiletextinput_video" dsid="mobiletextinput_video" value="Input"
+                                            placeholder="" id="UploadAd_mobiletextinput_video" tabindex="17" multiple data-theme="f"
+                                            class="ui-btn  UploadAd_mobiletextinput_video" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_15 -->
+                                <td id="UploadAd_mobilegridcell_15" name="mobilegridcell_15" class="UploadAd_mobilegridcell_15"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_17 -->
+                                <td id="UploadAd_mobilegridcell_17" name="mobilegridcell_17" class="UploadAd_mobilegridcell_17"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- html_80 -->
+                                        <div data-role="appery_html" name="html_80" dsid="html_80" id="UploadAd_html_80"
+                                        class="UploadAd_html_80">
+                                            <video id="video1" controls style="width:100%;border:none;">
+                                                <source id="video2" type="video/webm" src="">
+                                                    <source id="video3" type="video/mp4" src="">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="UploadAd_mobilegrid_uploadad_row_2">
+                                <!-- mobilegridcell_18 -->
+                                <td id="UploadAd_mobilegridcell_18" name="mobilegridcell_18" class="UploadAd_mobilegridcell_18"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_photo -->
+                                        <div name="mobilelabel_photo" id="UploadAd_mobilelabel_photo" dsid="mobilelabel_photo"
+                                        data-role="appery_label" class="UploadAd_mobilelabel_photo">
+                                            Photo
+                                        </div>
+                                        <!-- mobiletextinput_upload -->
+                                        <div data-role="fieldcontain" class="UploadAd_mobiletextinput_upload ">
+                                            <input type="file" name="mobiletextinput_upload" dsid="mobiletextinput_upload" value="Photo Upload"
+                                            placeholder="" id="UploadAd_mobiletextinput_upload" tabindex="3" multiple data-theme="b"
+                                            class="ui-btn   UploadAd_mobiletextinput_upload" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_19 -->
+                                <td id="UploadAd_mobilegridcell_19" name="mobilegridcell_19" class="UploadAd_mobilegridcell_19"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_20 -->
+                                <td id="UploadAd_mobilegridcell_20" name="mobilegridcell_20" class="UploadAd_mobilegridcell_20"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- html_photo -->
+                                        <div data-role="appery_html" name="html_photo" dsid="html_photo" id="UploadAd_html_photo"
+                                        class="UploadAd_html_photo">
+                                            <div name="image_content" id="id_image_content" style="width:100%;height:70px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="UploadAd_mobilegrid_uploadad_row_3">
+                                <!-- mobilegridcell_21 -->
+                                <td id="UploadAd_mobilegridcell_21" name="mobilegridcell_21" class="UploadAd_mobilegridcell_21"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_44 -->
+                                        <div name="mobilelabel_44" id="UploadAd_mobilelabel_44" dsid="mobilelabel_44" data-role="appery_label"
+                                        class="UploadAd_mobilelabel_44">
+                                            Quantity
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_22 -->
+                                <td id="UploadAd_mobilegridcell_22" name="mobilegridcell_22" class="UploadAd_mobilegridcell_22"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_23 -->
+                                <td id="UploadAd_mobilegridcell_23" name="mobilegridcell_23" class="UploadAd_mobilegridcell_23"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobiletextinput_quantity -->
+                                        <div data-role="fieldcontain" class="UploadAd_mobiletextinput_quantity ">
+                                            <input type="number" name="mobiletextinput_quantity" dsid="mobiletextinput_quantity"
+                                            value="1" placeholder="Quantity" id="UploadAd_mobiletextinput_quantity" tabindex="14"
+                                            multiple data-theme="b" class="UploadAd_mobiletextinput_quantity" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="UploadAd_mobilegrid_uploadad_row_4">
+                                <!-- mobilegridcell_24 -->
+                                <td id="UploadAd_mobilegridcell_24" name="mobilegridcell_24" class="UploadAd_mobilegridcell_24"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_49 -->
+                                        <div name="mobilelabel_49" id="UploadAd_mobilelabel_49" dsid="mobilelabel_49" data-role="appery_label"
+                                        class="UploadAd_mobilelabel_49">
+                                            Breed
+                                        </div>
+                                        <!-- mobileselectmenu_breed -->
+                                        <div data-role="fieldcontain" class="UploadAd_mobileselectmenu_breed ">
+                                            <select name="mobileselectmenu_breed" id="UploadAd_mobileselectmenu_breed" dsid="mobileselectmenu_breed"
+                                            data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="false"
+                                            data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="6" appery-class="UploadAd_mobileselectmenu_breed">
+                                                <option id="UploadAd_mobileselectmenu_breed-0" value="" reRender="mobileselectmenu_breed"
+                                                dsid="mobileselectmenu_breed-0" selected="selected">
+                                                    Select
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_25 -->
+                                <td id="UploadAd_mobilegridcell_25" name="mobilegridcell_25" class="UploadAd_mobilegridcell_25"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_26 -->
+                                <td id="UploadAd_mobilegridcell_26" name="mobilegridcell_26" class="UploadAd_mobilegridcell_26"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_50 -->
+                                        <div name="mobilelabel_50" id="UploadAd_mobilelabel_50" dsid="mobilelabel_50" data-role="appery_label"
+                                        class="UploadAd_mobilelabel_50">
+                                            Gender
+                                        </div>
+                                        <!-- mobileselectmenu_gender -->
+                                        <div data-role="fieldcontain" class="UploadAd_mobileselectmenu_gender ">
+                                            <select name="mobileselectmenu_gender" id="UploadAd_mobileselectmenu_gender" dsid="mobileselectmenu_gender"
+                                            data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="false"
+                                            data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="7" appery-class="UploadAd_mobileselectmenu_gender">
+                                                <option id="UploadAd_mobileselectmenu_gender-0" value="" reRender="mobileselectmenu_gender"
+                                                dsid="mobileselectmenu_gender-0" selected="selected">
+                                                    Select
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="UploadAd_mobilegrid_uploadad_row_5">
+                                <!-- mobilegridcell_27 -->
+                                <td id="UploadAd_mobilegridcell_27" name="mobilegridcell_27" class="UploadAd_mobilegridcell_27"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_60 -->
+                                        <div name="mobilelabel_60" id="UploadAd_mobilelabel_60" dsid="mobilelabel_60" data-role="appery_label"
+                                        class="UploadAd_mobilelabel_60">
+                                            Is this a known animal?
+                                        </div>
+                                        <!-- mobiletoggle_known -->
+                                        <div data-role="fieldcontain" class="UploadAd_mobiletoggle_known ">
+                                            <select data-role="flipswitch" name="mobiletoggle_known" id="UploadAd_mobiletoggle_known"
+                                            dsid="mobiletoggle_known" data-theme="f" data-track-theme="f">
+                                                <option value="off">
+                                                    Off
+                                                </option>
+                                                <option value="on" selected="">
+                                                    On
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_28 -->
+                                <td id="UploadAd_mobilegridcell_28" name="mobilegridcell_28" class="UploadAd_mobilegridcell_28"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_29 -->
+                                <td id="UploadAd_mobilegridcell_29" name="mobilegridcell_29" class="UploadAd_mobilegridcell_29"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_61 -->
+                                        <div name="mobilelabel_61" id="UploadAd_mobilelabel_61" dsid="mobilelabel_61" data-role="appery_label"
+                                        class="UploadAd_mobilelabel_61">
+                                            Its name
+                                        </div>
+                                        <!-- mobiletextinput_name -->
+                                        <div data-role="fieldcontain" class="UploadAd_mobiletextinput_name ">
+                                            <input type="text" name="mobiletextinput_name" dsid="mobiletextinput_name" value=""
+                                            placeholder="Name" id="UploadAd_mobiletextinput_name" tabindex="9" multiple data-theme="b"
+                                            class="UploadAd_mobiletextinput_name" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="UploadAd_mobilegrid_uploadad_row_6">
+                                <!-- mobilegridcell_30 -->
+                                <td id="UploadAd_mobilegridcell_30" name="mobilegridcell_30" class="UploadAd_mobilegridcell_30"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_66 -->
+                                        <div name="mobilelabel_66" id="UploadAd_mobilelabel_66" dsid="mobilelabel_66" data-role="appery_label"
+                                        class="UploadAd_mobilelabel_66">
+                                            Age
+                                        </div>
+                                        <!-- mobileselectmenu_age -->
+                                        <div data-role="fieldcontain" class="UploadAd_mobileselectmenu_age ">
+                                            <select name="mobileselectmenu_age" id="UploadAd_mobileselectmenu_age" dsid="mobileselectmenu_age"
+                                            data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="false"
+                                            data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="10" appery-class="UploadAd_mobileselectmenu_age">
+                                                <option id="UploadAd_mobileselectmenu_age-0" value="" reRender="mobileselectmenu_age"
+                                                dsid="mobileselectmenu_age-0" selected="selected">
+                                                    Select
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_31 -->
+                                <td id="UploadAd_mobilegridcell_31" name="mobilegridcell_31" class="UploadAd_mobilegridcell_31"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_32 -->
+                                <td id="UploadAd_mobilegridcell_32" name="mobilegridcell_32" class="UploadAd_mobilegridcell_32"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_67 -->
+                                        <div name="mobilelabel_67" id="UploadAd_mobilelabel_67" dsid="mobilelabel_67" data-role="appery_label"
+                                        class="UploadAd_mobilelabel_67">
+                                            For Slaugter
+                                        </div>
+                                        <div data-role="fieldcontain" class="UploadAd_mobilecheckboxgroup_55" id="UploadAd_mobilecheckboxgroup_55"
+                                        dsid="mobilecheckboxgroup_55">
+                                            <fieldset data-role="controlgroup" data-theme="f" class="">
+                                                <span dsid="mobilecheckbox_slaugter" class="UploadAd_mobilecheckbox_slaugter" name="mobilecheckbox_slaugter">
+                                                    <input type="checkbox" name="mobilecheckboxgroup_55" id="UploadAd_mobilecheckbox_slaugter"
+                                                    tabindex="11" value="Slaughter" />
+                                                    <label id="UploadAd_mobilecheckbox_slaugter_label" for="UploadAd_mobilecheckbox_slaugter">
+                                                        Slaughter
+                                                    </label>
+                                                </span>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- mobilelabel_62 -->
+                    <div name="mobilelabel_62" id="UploadAd_mobilelabel_62" dsid="mobilelabel_62" data-role="appery_label"
+                    class="UploadAd_mobilelabel_62">
+                        Information Text
+                    </div>
+                    <!-- mobiletextarea_information -->
+                    <div data-role="fieldcontain" class="UploadAd_mobiletextarea_information ">
+                        <textarea name="mobiletextarea_information" id="UploadAd_mobiletextarea_information"
+                        tabindex="12" dsid="mobiletextarea_information" data-theme="f" placeholder="Information"
+                        class="UploadAd_mobiletextarea_information">
+</textarea>
+                    </div>
+                    <!-- mobilelabel_65 -->
+                    <div name="mobilelabel_65" id="UploadAd_mobilelabel_65" dsid="mobilelabel_65" data-role="appery_label"
+                    class="UploadAd_mobilelabel_65">
+                        Contry
+                    </div>
+                    <!-- mobileselectmenu_contry -->
+                    <div data-role="fieldcontain" class="UploadAd_mobileselectmenu_contry ">
+                        <select name="mobileselectmenu_contry" id="UploadAd_mobileselectmenu_contry" dsid="mobileselectmenu_contry"
+                        data-theme="b" data-role="appery_selectmenu" data-inline="false" data-mini="false"
+                        data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="13" appery-class="UploadAd_mobileselectmenu_contry">
+                            <option id="UploadAd_mobileselectmenu_contry-0" value="" reRender="mobileselectmenu_contry"
+                            dsid="mobileselectmenu_contry-0" selected="selected">
+                                Select
+                            </option>
+                        </select>
+                    </div>
+                    <!-- mobilelabel_75 -->
+                    <div name="mobilelabel_75" id="UploadAd_mobilelabel_75" dsid="mobilelabel_75" data-role="appery_label"
+                    class="UploadAd_mobilelabel_75">
+                        City
+                    </div>
+                    <!-- mobileselectmenu_city -->
+                    <div data-role="fieldcontain" class="UploadAd_mobileselectmenu_city ">
+                        <select name="mobileselectmenu_city" id="UploadAd_mobileselectmenu_city" dsid="mobileselectmenu_city"
+                        data-theme="f" data-role="appery_selectmenu" data-inline="false" data-mini="false"
+                        data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="15" appery-class="UploadAd_mobileselectmenu_city">
+                            <option id="UploadAd_mobileselectmenu_city-0" value="" reRender="mobileselectmenu_city"
+                            dsid="mobileselectmenu_city-0" selected="selected">
+                                Select
+                            </option>
+                        </select>
+                    </div>
+                    <!-- mobilegrid_68 -->
+                    <div class="UploadAd_mobilegrid_68_wrapper" data-wrapper-for="mobilegrid_68">
+                        <table id="UploadAd_mobilegrid_68" class="UploadAd_mobilegrid_68" dsid="mobilegrid_68"
+                        name="mobilegrid_68" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="UploadAd_mobilegrid_68_row_0">
+                                <!-- mobilegridcell_69 -->
+                                <td id="UploadAd_mobilegridcell_69" name="mobilegridcell_69" class="UploadAd_mobilegridcell_69"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_70 -->
+                                <td id="UploadAd_mobilegridcell_70" name="mobilegridcell_70" class="UploadAd_mobilegridcell_70"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="UploadAd_mobilegrid_68_row_1">
+                                <!-- mobilegridcell_71 -->
+                                <td id="UploadAd_mobilegridcell_71" name="mobilegridcell_71" class="UploadAd_mobilegridcell_71"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilebutton_cancel --><!--
+                                        --><a data-role="button" name="mobilebutton_cancel" dsid="mobilebutton_cancel" class="UploadAd_mobilebutton_cancel"
+                                        id="UploadAd_mobilebutton_cancel" data-corners="true" data-icon="delete" data-iconpos="left"
+                                        x-apple-data-detectors="false" data-mini="false" data-theme="d" tabindex="1">
+                                        Cancel
+                                        </a><!--
+                                        --><!-- mobilelabel_hidden -->
+                                        <div name="mobilelabel_hidden" id="UploadAd_mobilelabel_hidden" dsid="mobilelabel_hidden"
+                                        data-role="appery_label" class="UploadAd_mobilelabel_hidden">
+                                            Label
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_72 -->
+                                <td id="UploadAd_mobilegridcell_72" name="mobilegridcell_72" class="UploadAd_mobilegridcell_72"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilebutton_upload --><!--
+                                        --><a data-role="button" name="mobilebutton_upload" dsid="mobilebutton_upload" class="UploadAd_mobilebutton_upload"
+                                        id="UploadAd_mobilebutton_upload" data-corners="true" data-icon="plus" data-iconpos="left"
+                                        x-apple-data-detectors="false" data-mini="false" data-theme="a" tabindex="16">
+                                        Save
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="UploadAd_mobilefooter1" name="mobilefooter1"
+            dsid="mobilefooter1" id="UploadAd_mobilefooter1" data-theme="f">
+                <!-- mobilenavbar_6 -->
+                <div data-role="navbar" id="UploadAd_mobilenavbar_6" name="mobilenavbar_6" dsid="mobilenavbar_6"
+                class="UploadAd_mobilenavbar_6" data-theme="f" style="position: relative;">
+                    <ul>
+                        <!-- favorite_item -->
+                        <li>
+                            <a data-theme="f" data-icon="star" id="UploadAd_favorite_item" dsid="favorite_item"
+                            name="favorite_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- home_item -->
+                        <li>
+                            <a data-theme="f" data-icon="home" id="UploadAd_home_item" dsid="home_item" name="home_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- upload_item -->
+                        <li>
+                            <a data-theme="f" data-icon="action" id="UploadAd_upload_item" dsid="upload_item"
+                            name="upload_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

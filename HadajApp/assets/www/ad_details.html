@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            ad_details
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" data-dialog="true" style="min-height:960px;" dsid="ad_details"
+        id="ad_details" class="type-interior" data-theme="f" data-close-btn='right'>
+            <!-- mobileheader -->
+            <div data-role="header" data-position="inline" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader" id="ad_details_mobileheader" class="ad_details_mobileheader">
+                <h1 dsid="mobileheader">
+                    Caption
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="ad_details_mobilecontainer" name="mobilecontainer"
+            class="ad_details_mobilecontainer ui-content" dsid="mobilecontainer" data-theme="f">
+                <link href="ad_details.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="ad_details.js">
+                </script>
+                <!-- mobilegrid_picture -->
+                <div class="ad_details_mobilegrid_picture_wrapper" data-wrapper-for="mobilegrid_picture">
+                    <table id="ad_details_mobilegrid_picture" class="ad_details_mobilegrid_picture"
+                    dsid="mobilegrid_picture" name="mobilegrid_picture" cellpadding=0 cellspacing=0>
+                        <col style="width:104px;" />
+                        <tr class="ad_details_mobilegrid_picture_row_0">
+                            <!-- mobilegridcell_3 -->
+                            <td id="ad_details_mobilegridcell_3" name="mobilegridcell_3" class="ad_details_mobilegridcell_3"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileimage_image -->
+                                    <img class="ad_details_mobileimage_image" src="files/resources/image/no-image.jpg"
+                                    id="ad_details_mobileimage_image" dsid="mobileimage_image" name="mobileimage_image"
+                                    />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilegrid_8 -->
+                <div class="ad_details_mobilegrid_8_wrapper" data-wrapper-for="mobilegrid_8">
+                    <table id="ad_details_mobilegrid_8" class="ad_details_mobilegrid_8" dsid="mobilegrid_8"
+                    name="mobilegrid_8" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="ad_details_mobilegrid_8_row_0">
+                            <!-- mobilegridcell_9 -->
+                            <td id="ad_details_mobilegridcell_9" name="mobilegridcell_9" class="ad_details_mobilegridcell_9"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_35 -->
+                                    <div name="mobilelabel_35" id="ad_details_mobilelabel_35" dsid="mobilelabel_35"
+                                    data-role="appery_label" class="ad_details_mobilelabel_35">
+                                        Type
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_10 -->
+                            <td id="ad_details_mobilegridcell_10" name="mobilegridcell_10" class="ad_details_mobilegridcell_10"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_type -->
+                                    <div name="mobilelabel_type" id="ad_details_mobilelabel_type" dsid="mobilelabel_type"
+                                    data-role="appery_label" class="ad_details_mobilelabel_type">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ad_details_mobilegrid_8_row_1">
+                            <!-- mobilegridcell_13 -->
+                            <td id="ad_details_mobilegridcell_13" name="mobilegridcell_13" class="ad_details_mobilegridcell_13"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_36 -->
+                                    <div name="mobilelabel_36" id="ad_details_mobilelabel_36" dsid="mobilelabel_36"
+                                    data-role="appery_label" class="ad_details_mobilelabel_36">
+                                        Breed
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_14 -->
+                            <td id="ad_details_mobilegridcell_14" name="mobilegridcell_14" class="ad_details_mobilegridcell_14"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_breed -->
+                                    <div name="mobilelabel_breed" id="ad_details_mobilelabel_breed" dsid="mobilelabel_breed"
+                                    data-role="appery_label" class="ad_details_mobilelabel_breed">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ad_details_mobilegrid_8_row_2">
+                            <!-- mobilegridcell_15 -->
+                            <td id="ad_details_mobilegridcell_15" name="mobilegridcell_15" class="ad_details_mobilegridcell_15"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_37 -->
+                                    <div name="mobilelabel_37" id="ad_details_mobilelabel_37" dsid="mobilelabel_37"
+                                    data-role="appery_label" class="ad_details_mobilelabel_37">
+                                        Gender
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_16 -->
+                            <td id="ad_details_mobilegridcell_16" name="mobilegridcell_16" class="ad_details_mobilegridcell_16"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_gender -->
+                                    <div name="mobilelabel_gender" id="ad_details_mobilelabel_gender" dsid="mobilelabel_gender"
+                                    data-role="appery_label" class="ad_details_mobilelabel_gender">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ad_details_mobilegrid_8_row_3">
+                            <!-- mobilegridcell_17 -->
+                            <td id="ad_details_mobilegridcell_17" name="mobilegridcell_17" class="ad_details_mobilegridcell_17"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_38 -->
+                                    <div name="mobilelabel_38" id="ad_details_mobilelabel_38" dsid="mobilelabel_38"
+                                    data-role="appery_label" class="ad_details_mobilelabel_38">
+                                        Age
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_18 -->
+                            <td id="ad_details_mobilegridcell_18" name="mobilegridcell_18" class="ad_details_mobilegridcell_18"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_age -->
+                                    <div name="mobilelabel_age" id="ad_details_mobilelabel_age" dsid="mobilelabel_age"
+                                    data-role="appery_label" class="ad_details_mobilelabel_age">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ad_details_mobilegrid_8_row_4">
+                            <!-- mobilegridcell_19 -->
+                            <td id="ad_details_mobilegridcell_19" name="mobilegridcell_19" class="ad_details_mobilegridcell_19"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_39 -->
+                                    <div name="mobilelabel_39" id="ad_details_mobilelabel_39" dsid="mobilelabel_39"
+                                    data-role="appery_label" class="ad_details_mobilelabel_39">
+                                        Its name
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_20 -->
+                            <td id="ad_details_mobilegridcell_20" name="mobilegridcell_20" class="ad_details_mobilegridcell_20"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_its_name -->
+                                    <div name="mobilelabel_its_name" id="ad_details_mobilelabel_its_name" dsid="mobilelabel_its_name"
+                                    data-role="appery_label" class="ad_details_mobilelabel_its_name">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ad_details_mobilegrid_8_row_5">
+                            <!-- mobilegridcell_21 -->
+                            <td id="ad_details_mobilegridcell_21" name="mobilegridcell_21" class="ad_details_mobilegridcell_21"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_40 -->
+                                    <div name="mobilelabel_40" id="ad_details_mobilelabel_40" dsid="mobilelabel_40"
+                                    data-role="appery_label" class="ad_details_mobilelabel_40">
+                                        Information
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_22 -->
+                            <td id="ad_details_mobilegridcell_22" name="mobilegridcell_22" class="ad_details_mobilegridcell_22"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_information -->
+                                    <div name="mobilelabel_information" id="ad_details_mobilelabel_information" dsid="mobilelabel_information"
+                                    data-role="appery_label" class="ad_details_mobilelabel_information">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ad_details_mobilegrid_8_row_6">
+                            <!-- mobilegridcell_23 -->
+                            <td id="ad_details_mobilegridcell_23" name="mobilegridcell_23" class="ad_details_mobilegridcell_23"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_41 -->
+                                    <div name="mobilelabel_41" id="ad_details_mobilelabel_41" dsid="mobilelabel_41"
+                                    data-role="appery_label" class="ad_details_mobilelabel_41">
+                                        Contry
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_24 -->
+                            <td id="ad_details_mobilegridcell_24" name="mobilegridcell_24" class="ad_details_mobilegridcell_24"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_contry -->
+                                    <div name="mobilelabel_contry" id="ad_details_mobilelabel_contry" dsid="mobilelabel_contry"
+                                    data-role="appery_label" class="ad_details_mobilelabel_contry">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ad_details_mobilegrid_8_row_7">
+                            <!-- mobilegridcell_25 -->
+                            <td id="ad_details_mobilegridcell_25" name="mobilegridcell_25" class="ad_details_mobilegridcell_25"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_42 -->
+                                    <div name="mobilelabel_42" id="ad_details_mobilelabel_42" dsid="mobilelabel_42"
+                                    data-role="appery_label" class="ad_details_mobilelabel_42">
+                                        City
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_26 -->
+                            <td id="ad_details_mobilegridcell_26" name="mobilegridcell_26" class="ad_details_mobilegridcell_26"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_city -->
+                                    <div name="mobilelabel_city" id="ad_details_mobilelabel_city" dsid="mobilelabel_city"
+                                    data-role="appery_label" class="ad_details_mobilelabel_city">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ad_details_mobilegrid_8_row_8">
+                            <!-- mobilegridcell_55 -->
+                            <td id="ad_details_mobilegridcell_55" name="mobilegridcell_55" class="ad_details_mobilegridcell_55"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_59 -->
+                                    <div name="mobilelabel_59" id="ad_details_mobilelabel_59" dsid="mobilelabel_59"
+                                    data-role="appery_label" class="ad_details_mobilelabel_59">
+                                        Known animal
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_56 -->
+                            <td id="ad_details_mobilegridcell_56" name="mobilegridcell_56" class="ad_details_mobilegridcell_56"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_known_animal -->
+                                    <div name="mobilelabel_known_animal" id="ad_details_mobilelabel_known_animal" dsid="mobilelabel_known_animal"
+                                    data-role="appery_label" class="ad_details_mobilelabel_known_animal">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ad_details_mobilegrid_8_row_9">
+                            <!-- mobilegridcell_57 -->
+                            <td id="ad_details_mobilegridcell_57" name="mobilegridcell_57" class="ad_details_mobilegridcell_57"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_58 -->
+                            <td id="ad_details_mobilegridcell_58" name="mobilegridcell_58" class="ad_details_mobilegridcell_58"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- mobilefooter -->
+            <div data-role="footer" data-position="inline" class="ad_details_mobilefooter" name="mobilefooter"
+            dsid="mobilefooter" id="ad_details_mobilefooter" data-theme="f">
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,125 @@
+[name=mobilegrid_picture]{
+float:left;
+}
+
+
+#ApproveActivatePhone_mobilebutton_1,
+#ApproveActivatePhone_mobilebutton_2, 
+#ApproveActivatePhone_mobilebutton_3,
+#ApproveActivatePhone_mobilebutton_4,
+#ApproveActivatePhone_mobilebutton_5,
+#ApproveActivatePhone_mobilebutton_6, 
+#ApproveActivatePhone_mobilebutton_7,
+#ApproveActivatePhone_mobilebutton_8, 
+#ApproveActivatePhone_mobilebutton_9, 
+#ApproveActivatePhone_mobilebutton_0,
+#ApproveActivatePhone_mobilebutton_c,
+#ApproveActivatePhone_mobilebutton_clr
+{
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    font-size: 60px;
+    height: 87px;
+    width: 87px;
+    padding: 0;
+    background: white;
+    border: 0;
+    text-shadow: none;
+    color: grey;
+    border:1px solid #6c6c6c;
+}
+
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+
+
+#ApproveActivatePhone_mobilebutton_done {
+    background: #A1EE83;
+    color: grey;
+    border: 0;
+    border-radius: 16px;
+    text-align: center;
+    text-shadow: none;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 20px 30px 0px 30px;
+    padding: 9px;
+}
+#ApproveActivatePhone_mobiletextinput_phone_no,
+#ApproveActivatePhone_mobilelabel_45{
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    font-size: 30px;
+    background: white;
+    border: 0;
+    text-shadow: none;
+    color: grey;
+}
+#ApproveActivatePhone_mobilelabel_45{
+    float:right !important;
+    padding-top:10px;
+}
+
+#PhoneConfirm_mobilelabel_phone_no
+{
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    font-size: 30px;
+    height: 43px;
+    padding: 0;
+    background: white;
+    border: 0;
+    text-shadow: none;
+    color: grey;
+}
+
+.img-circle {
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+}
+
+/*
+.ui-li-static-container img{
+    border-radius: 25%;
+    width:100px;
+    height:100px; 
+}
+*/
+
+[name=mobilegrid_type]{
+float:left;
+width:130px !important;
+}
+
+[name=mobilelistitem_type]{
+width:125px !important;
+}
+
+
+
+[name=mobilegrid_profile]{
+float:left;
+width:250px !important;
+}
+
+[name=mobilelistitem_profile]{
+width:245px !important;
+}

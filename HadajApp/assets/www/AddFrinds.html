@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            AddFrinds
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:960px;" dsid="AddFrinds" id="AddFrinds"
+        class="type-interior" data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="AddFrinds_mobileheader1" class="AddFrinds_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    HadajApp
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="AddFrinds_mobilecontainer1" name="mobilecontainer1"
+            class="AddFrinds_mobilecontainer1 ui-content" dsid="mobilecontainer1" data-theme="f">
+                <link href="AddFrinds.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="AddFrinds.js">
+                </script>
+                <!-- mobileworkarea_10 -->
+                <div class="AddFrinds_mobileworkarea_10 AddFrinds_mobileworkarea_10">
+                    <!-- mobilelabel_18 -->
+                    <div name="mobilelabel_18" id="AddFrinds_mobilelabel_18" dsid="mobilelabel_18" data-role="appery_label"
+                    class="AddFrinds_mobilelabel_18">
+                        AddFrinds
+                    </div>
+                    <!-- mobilegrid_11 -->
+                    <div class="AddFrinds_mobilegrid_11_wrapper" data-wrapper-for="mobilegrid_11">
+                        <table id="AddFrinds_mobilegrid_11" class="AddFrinds_mobilegrid_11" dsid="mobilegrid_11"
+                        name="mobilegrid_11" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="AddFrinds_mobilegrid_11_row_0">
+                                <!-- mobilegridcell_12 -->
+                                <td id="AddFrinds_mobilegridcell_12" name="mobilegridcell_12" class="AddFrinds_mobilegridcell_12"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilebutton_back --><!--
+                                        --><a data-role="button" name="mobilebutton_back" dsid="mobilebutton_back" class="AddFrinds_mobilebutton_back"
+                                        id="AddFrinds_mobilebutton_back" data-corners="true" data-icon="arrow-l" data-iconpos="left"
+                                        x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="a"
+                                        tabindex="2">
+                                        Back
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_13 -->
+                                <td id="AddFrinds_mobilegridcell_13" name="mobilegridcell_13" class="AddFrinds_mobilegridcell_13"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilesearchbar_19 -->
+                                        <div data-role="fieldcontain" class="AddFrinds_mobilesearchbar_19 ">
+                                            <div id="AddFrinds_mobilesearchbar_19-cover-div">
+                                                <img id="AddFrinds_mobilesearchbar_19-cover-img" src="files/resources/image/icon-search-cover.png"
+                                                />
+                                            </div>
+                                            <input type="search" name="mobilesearchbar_19" id="AddFrinds_mobilesearchbar_19"
+                                            dsid="mobilesearchbar_19" value="Username" placeholder="" data-theme="f" tabindex="3"
+                                            class="AddFrinds_mobilesearchbar_19" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- infinite_list2 -->
+                    <ul data-role="listview" id="AddFrinds_infinite_list2" class="AddFrinds_infinite_list2"
+                    name="infinite_list2" dsid="infinite_list2" data-inset="true" data-theme="f" data-divider-theme="b"
+                    data-count-theme="b" style="" data-split-icon="carat-r">
+                        <!-- mobilelistitem_1 -->
+                        <li id="AddFrinds_mobilelistitem_1" name="mobilelistitem_1" dsid="mobilelistitem_1"
+                        data-icon="carat-r" class="AddFrinds_mobilelistitem_1  ui-btn-icon-right ui-icon-carat-r">
+                            <div class="ui-li-static-container">
+                                <!-- mobilegrid_user -->
+                                <div class="AddFrinds_mobilegrid_user_wrapper" data-wrapper-for="mobilegrid_user">
+                                    <table id="AddFrinds_mobilegrid_user" class="AddFrinds_mobilegrid_user" dsid="mobilegrid_user"
+                                    name="mobilegrid_user" cellpadding=0 cellspacing=0>
+                                        <col style="width:104px;" />
+                                        <col style="width:auto;" />
+                                        <col style="width:auto;" />
+                                        <tr class="AddFrinds_mobilegrid_user_row_0">
+                                            <!-- mobilegridcell_33 -->
+                                            <td id="AddFrinds_mobilegridcell_33" name="mobilegridcell_33" class="AddFrinds_mobilegridcell_33"
+                                            colspan=1 rowspan=1>
+                                                <div class="cell-wrapper">
+                                                    <!-- mobileimage_38 -->
+                                                    <img class="AddFrinds_mobileimage_38" src="files/resources/image/no-image.jpg" id="AddFrinds_mobileimage_38"
+                                                    dsid="mobileimage_38" name="mobileimage_38" />
+                                                </div>
+                                            </td>
+                                            <!-- mobilegridcell_39 -->
+                                            <td id="AddFrinds_mobilegridcell_39" name="mobilegridcell_39" class="AddFrinds_mobilegridcell_39"
+                                            colspan=1 rowspan=1>
+                                                <div class="cell-wrapper">
+                                                    <!-- mobilelabel_username -->
+                                                    <div name="mobilelabel_username" id="AddFrinds_mobilelabel_username" dsid="mobilelabel_username"
+                                                    data-role="appery_label" class="AddFrinds_mobilelabel_username">
+                                                        Username
+                                                    </div>
+                                                    <!-- mobilegrid_46 -->
+                                                    <div class="AddFrinds_mobilegrid_46_wrapper" data-wrapper-for="mobilegrid_46">
+                                                        <table id="AddFrinds_mobilegrid_46" class="AddFrinds_mobilegrid_46" dsid="mobilegrid_46"
+                                                        name="mobilegrid_46" cellpadding=0 cellspacing=0>
+                                                            <col style="width:auto;" />
+                                                            <col style="width:auto;" />
+                                                            <tr class="AddFrinds_mobilegrid_46_row_0">
+                                                                <!-- mobilegridcell_47 -->
+                                                                <td id="AddFrinds_mobilegridcell_47" name="mobilegridcell_47" class="AddFrinds_mobilegridcell_47"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_first_name -->
+                                                                        <div name="mobilelabel_first_name" id="AddFrinds_mobilelabel_first_name" dsid="mobilelabel_first_name"
+                                                                        data-role="appery_label" class="AddFrinds_mobilelabel_first_name">
+                                                                            First Name
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_48 -->
+                                                                <td id="AddFrinds_mobilegridcell_48" name="mobilegridcell_48" class="AddFrinds_mobilegridcell_48"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_last_name -->
+                                                                        <div name="mobilelabel_last_name" id="AddFrinds_mobilelabel_last_name" dsid="mobilelabel_last_name"
+                                                                        data-role="appery_label" class="AddFrinds_mobilelabel_last_name">
+                                                                            Last Name
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="AddFrinds_mobilegrid_46_row_1">
+                                                                <!-- mobilegridcell_55 -->
+                                                                <td id="AddFrinds_mobilegridcell_55" name="mobilegridcell_55" class="AddFrinds_mobilegridcell_55"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_59 -->
+                                                                        <div name="mobilelabel_59" id="AddFrinds_mobilelabel_59" dsid="mobilelabel_59" data-role="appery_label"
+                                                                        class="AddFrinds_mobilelabel_59">
+                                                                            Phone
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_56 -->
+                                                                <td id="AddFrinds_mobilegridcell_56" name="mobilegridcell_56" class="AddFrinds_mobilegridcell_56"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_phone -->
+                                                                        <div name="mobilelabel_phone" id="AddFrinds_mobilelabel_phone" dsid="mobilelabel_phone"
+                                                                        data-role="appery_label" class="AddFrinds_mobilelabel_phone">
+                                                                            Phone
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="AddFrinds_mobilegrid_46_row_2">
+                                                                <!-- mobilegridcell_57 -->
+                                                                <td id="AddFrinds_mobilegridcell_57" name="mobilegridcell_57" class="AddFrinds_mobilegridcell_57"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_58 -->
+                                                                <td id="AddFrinds_mobilegridcell_58" name="mobilegridcell_58" class="AddFrinds_mobilegridcell_58"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <!-- mobilegridcell_40 -->
+                                            <td id="AddFrinds_mobilegridcell_40" name="mobilegridcell_40" class="AddFrinds_mobilegridcell_40"
+                                            colspan=1 rowspan=1>
+                                                <div class="cell-wrapper">
+                                                    <!-- mobilebutton_follow --><!--
+                                                    --><a data-role="button" name="mobilebutton_follow" dsid="mobilebutton_follow" class="AddFrinds_mobilebutton_follow"
+                                                    id="AddFrinds_mobilebutton_follow" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                                                    x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="a"
+                                                    tabindex="6">
+                                                    Follow
+                                                    </a><!--
+                                                    --><!-- mobilelabel_id -->
+                                                    <div name="mobilelabel_id" id="AddFrinds_mobilelabel_id" dsid="mobilelabel_id" data-role="appery_label"
+                                                    class="AddFrinds_mobilelabel_id">
+                                                        id
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="AddFrinds_mobilefooter1" name="mobilefooter1"
+            dsid="mobilefooter1" id="AddFrinds_mobilefooter1" data-theme="f">
+                <!-- mobilenavbar_6 -->
+                <div data-role="navbar" id="AddFrinds_mobilenavbar_6" name="mobilenavbar_6" dsid="mobilenavbar_6"
+                class="AddFrinds_mobilenavbar_6" data-theme="f" style="position: relative;">
+                    <ul>
+                        <!-- favorite_item -->
+                        <li>
+                            <a data-theme="f" data-icon="star" id="AddFrinds_favorite_item" dsid="favorite_item"
+                            name="favorite_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- home_item -->
+                        <li>
+                            <a data-theme="f" data-icon="home" id="AddFrinds_home_item" dsid="home_item" name="home_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- upload_item -->
+                        <li>
+                            <a data-theme="f" data-icon="action" id="AddFrinds_upload_item" dsid="upload_item"
+                            name="upload_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

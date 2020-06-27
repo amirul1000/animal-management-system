@@ -1,0 +1,329 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer1 */
+.ui-content.MyOrders_mobilecontainer1 {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileworkarea_10*/
+.MyOrders_mobileworkarea_10 {
+	background-color: transparent;
+	padding: 0px;
+}
+/* mobilelabel_11 */
+.MyOrders_mobilelabel_11 {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilebutton_back */
+#MyOrders_mobilebutton_back {
+
+}
+.ui-btn.MyOrders_mobilebutton_back {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegrid_my_orders */
+.MyOrders_mobilegrid_my_orders {
+	height: auto;
+	width:400px;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.MyOrders_mobilegrid_my_orders_wrapper {
+
+}
+.MyOrders_mobilegrid_my_orders > tr > td {
+	vertical-align: top;
+}
+.MyOrders_mobilegrid_my_orders_row_0, .MyOrders_mobilegrid_my_orders_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_13 */
+.MyOrders_mobilegridcell_13 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_13 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelist_my_orders */
+.ui-page .MyOrders_mobilelist_my_orders {
+	margin: 4px 0px 0px 0px;
+}
+/* mobilelistitem_my_orders */
+.ui-mobile-viewport ul[data-role="listview"] li.MyOrders_mobilelistitem_my_orders {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.MyOrders_mobilelistitem_my_orders .ui-li-static-container {
+	padding: 0px 0px 4px 0px;
+	padding-right: 41px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.MyOrders_mobilelistitem_my_orders.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* mobilelistitembutton_19 */
+.MyOrders_mobilelistitembutton_19 {
+
+}
+/* mobilegrid_24 */
+.MyOrders_mobilegrid_24 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.MyOrders_mobilegrid_24_wrapper {
+
+}
+.MyOrders_mobilegrid_24 > tr > td {
+	vertical-align: top;
+}
+.MyOrders_mobilegrid_24_row_0, .MyOrders_mobilegrid_24_row_0 > td {
+	height: 30px
+}
+.MyOrders_mobilegrid_24_row_1, .MyOrders_mobilegrid_24_row_1 > td {
+	height: 30px
+}
+.MyOrders_mobilegrid_24_row_2, .MyOrders_mobilegrid_24_row_2 > td {
+	height: 30px
+}
+.MyOrders_mobilegrid_24_row_3, .MyOrders_mobilegrid_24_row_3 > td {
+	height: 30px
+}
+/* mobilegridcell_25 */
+.MyOrders_mobilegridcell_25 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_25 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_type */
+.MyOrders_mobilelabel_type {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_26 */
+.MyOrders_mobilegridcell_26 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_26 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_breed */
+.MyOrders_mobilelabel_breed {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_39 */
+.MyOrders_mobilegridcell_39 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_39 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_gender */
+.MyOrders_mobilelabel_gender {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_27 */
+.MyOrders_mobilegridcell_27 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_27 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_from_contry */
+.MyOrders_mobilelabel_from_contry {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelabel_from_city */
+.MyOrders_mobilelabel_from_city {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_28 */
+.MyOrders_mobilegridcell_28 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_28 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_47 */
+.MyOrders_mobilelabel_47 {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_40 */
+.MyOrders_mobilegridcell_40 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_40 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_to_contry */
+.MyOrders_mobilelabel_to_contry {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilelabel_to_city */
+.MyOrders_mobilelabel_to_city {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_29 */
+.MyOrders_mobilegridcell_29 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_29 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_quantity */
+.MyOrders_mobilelabel_quantity {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_30 */
+.MyOrders_mobilegridcell_30 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_30 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_41 */
+.MyOrders_mobilegridcell_41 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_41 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_31 */
+.MyOrders_mobilegridcell_31 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_31 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_info */
+.MyOrders_mobilelabel_info {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_32 */
+.MyOrders_mobilegridcell_32 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_32 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_42 */
+.MyOrders_mobilegridcell_42 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.MyOrders_mobilegridcell_42 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_delete */
+#MyOrders_mobilebutton_delete {
+
+}
+.ui-btn.MyOrders_mobilebutton_delete {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilelabel_my_choice_id */
+.MyOrders_mobilelabel_my_choice_id {
+	text-decoration: none; font-weight: normal; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilefooter1 */
+.MyOrders_mobilefooter1 {
+	min-height:38px;
+}
+/* mobilenavbar_6 */
+.MyOrders_mobilenavbar_6 {
+
+}
+.MyOrders_mobilenavbar_6 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .MyOrders_mobilenavbar_6 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .MyOrders_mobilenavbar_6 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.MyOrders_mobilenavbar_6 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

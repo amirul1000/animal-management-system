@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            MyOrders
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:960px;" dsid="MyOrders" id="MyOrders" class="type-interior"
+        data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="MyOrders_mobileheader1" class="MyOrders_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    HadajApp
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="MyOrders_mobilecontainer1" name="mobilecontainer1"
+            class="MyOrders_mobilecontainer1 ui-content" dsid="mobilecontainer1" data-theme="f">
+                <link href="MyOrders.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="MyOrders.js">
+                </script>
+                <!-- mobileworkarea_10 -->
+                <div class="MyOrders_mobileworkarea_10 MyOrders_mobileworkarea_10">
+                    <!-- mobilelabel_11 -->
+                    <div name="mobilelabel_11" id="MyOrders_mobilelabel_11" dsid="mobilelabel_11" data-role="appery_label"
+                    class="MyOrders_mobilelabel_11">
+                        My Orders
+                    </div>
+                    <!-- mobilebutton_back --><!--
+                    --><a data-role="button" name="mobilebutton_back" dsid="mobilebutton_back" class="MyOrders_mobilebutton_back"
+                    id="MyOrders_mobilebutton_back" data-corners="true" data-icon="arrow-l" data-iconpos="left"
+                    x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="a"
+                    tabindex="1">
+                    Back
+                    </a><!--
+                    --><!-- mobilegrid_my_orders -->
+                    <div class="MyOrders_mobilegrid_my_orders_wrapper" data-wrapper-for="mobilegrid_my_orders">
+                        <table id="MyOrders_mobilegrid_my_orders" class="MyOrders_mobilegrid_my_orders"
+                        dsid="mobilegrid_my_orders" name="mobilegrid_my_orders" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <tr class="MyOrders_mobilegrid_my_orders_row_0">
+                                <!-- mobilegridcell_13 -->
+                                <td id="MyOrders_mobilegridcell_13" name="mobilegridcell_13" class="MyOrders_mobilegridcell_13"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelist_my_orders -->
+                                        <ul data-role="listview" id="MyOrders_mobilelist_my_orders" class="MyOrders_mobilelist_my_orders"
+                                        name="mobilelist_my_orders" dsid="mobilelist_my_orders" data-inset="true" data-theme="f"
+                                        data-divider-theme="b" data-count-theme="b" style="" data-split-icon="carat-r">
+                                            <!-- mobilelistitem_my_orders -->
+                                            <li id="MyOrders_mobilelistitem_my_orders" name="mobilelistitem_my_orders" dsid="mobilelistitem_my_orders"
+                                            data-icon="carat-r" class="MyOrders_mobilelistitem_my_orders  ui-btn-icon-right ui-icon-carat-r">
+                                                <div class="ui-li-static-container">
+                                                    <!-- mobilegrid_24 -->
+                                                    <div class="MyOrders_mobilegrid_24_wrapper" data-wrapper-for="mobilegrid_24">
+                                                        <table id="MyOrders_mobilegrid_24" class="MyOrders_mobilegrid_24" dsid="mobilegrid_24"
+                                                        name="mobilegrid_24" cellpadding=0 cellspacing=0>
+                                                            <col style="width:auto;" />
+                                                            <col style="width:auto;" />
+                                                            <col style="width:auto;" />
+                                                            <tr class="MyOrders_mobilegrid_24_row_0">
+                                                                <!-- mobilegridcell_25 -->
+                                                                <td id="MyOrders_mobilegridcell_25" name="mobilegridcell_25" class="MyOrders_mobilegridcell_25"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_type -->
+                                                                        <div name="mobilelabel_type" id="MyOrders_mobilelabel_type" dsid="mobilelabel_type"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_type">
+                                                                            Type
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_26 -->
+                                                                <td id="MyOrders_mobilegridcell_26" name="mobilegridcell_26" class="MyOrders_mobilegridcell_26"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_breed -->
+                                                                        <div name="mobilelabel_breed" id="MyOrders_mobilelabel_breed" dsid="mobilelabel_breed"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_breed">
+                                                                            Breed
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_39 -->
+                                                                <td id="MyOrders_mobilegridcell_39" name="mobilegridcell_39" class="MyOrders_mobilegridcell_39"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_gender -->
+                                                                        <div name="mobilelabel_gender" id="MyOrders_mobilelabel_gender" dsid="mobilelabel_gender"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_gender">
+                                                                            Gender
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="MyOrders_mobilegrid_24_row_1">
+                                                                <!-- mobilegridcell_27 -->
+                                                                <td id="MyOrders_mobilegridcell_27" name="mobilegridcell_27" class="MyOrders_mobilegridcell_27"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_from_contry -->
+                                                                        <div name="mobilelabel_from_contry" id="MyOrders_mobilelabel_from_contry" dsid="mobilelabel_from_contry"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_from_contry">
+                                                                            From Contry
+                                                                        </div>
+                                                                        <!-- mobilelabel_from_city -->
+                                                                        <div name="mobilelabel_from_city" id="MyOrders_mobilelabel_from_city" dsid="mobilelabel_from_city"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_from_city">
+                                                                            From City
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_28 -->
+                                                                <td id="MyOrders_mobilegridcell_28" name="mobilegridcell_28" class="MyOrders_mobilegridcell_28"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_47 -->
+                                                                        <div name="mobilelabel_47" id="MyOrders_mobilelabel_47" dsid="mobilelabel_47" data-role="appery_label"
+                                                                        class="MyOrders_mobilelabel_47">
+                                                                            To
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_40 -->
+                                                                <td id="MyOrders_mobilegridcell_40" name="mobilegridcell_40" class="MyOrders_mobilegridcell_40"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_to_contry -->
+                                                                        <div name="mobilelabel_to_contry" id="MyOrders_mobilelabel_to_contry" dsid="mobilelabel_to_contry"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_to_contry">
+                                                                            To Contry
+                                                                        </div>
+                                                                        <!-- mobilelabel_to_city -->
+                                                                        <div name="mobilelabel_to_city" id="MyOrders_mobilelabel_to_city" dsid="mobilelabel_to_city"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_to_city">
+                                                                            To City
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="MyOrders_mobilegrid_24_row_2">
+                                                                <!-- mobilegridcell_29 -->
+                                                                <td id="MyOrders_mobilegridcell_29" name="mobilegridcell_29" class="MyOrders_mobilegridcell_29"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_quantity -->
+                                                                        <div name="mobilelabel_quantity" id="MyOrders_mobilelabel_quantity" dsid="mobilelabel_quantity"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_quantity">
+                                                                            Quantity
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_30 -->
+                                                                <td id="MyOrders_mobilegridcell_30" name="mobilegridcell_30" class="MyOrders_mobilegridcell_30"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_41 -->
+                                                                <td id="MyOrders_mobilegridcell_41" name="mobilegridcell_41" class="MyOrders_mobilegridcell_41"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="MyOrders_mobilegrid_24_row_3">
+                                                                <!-- mobilegridcell_31 -->
+                                                                <td id="MyOrders_mobilegridcell_31" name="mobilegridcell_31" class="MyOrders_mobilegridcell_31"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilelabel_info -->
+                                                                        <div name="mobilelabel_info" id="MyOrders_mobilelabel_info" dsid="mobilelabel_info"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_info">
+                                                                            Info
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_32 -->
+                                                                <td id="MyOrders_mobilegridcell_32" name="mobilegridcell_32" class="MyOrders_mobilegridcell_32"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                    </div>
+                                                                </td>
+                                                                <!-- mobilegridcell_42 -->
+                                                                <td id="MyOrders_mobilegridcell_42" name="mobilegridcell_42" class="MyOrders_mobilegridcell_42"
+                                                                colspan=1 rowspan=1>
+                                                                    <div class="cell-wrapper">
+                                                                        <!-- mobilebutton_delete --><!--
+                                                                        --><a data-role="button" name="mobilebutton_delete" dsid="mobilebutton_delete" class="MyOrders_mobilebutton_delete"
+                                                                        id="MyOrders_mobilebutton_delete" data-corners="true" data-icon="delete" data-iconpos="left"
+                                                                        x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="d"
+                                                                        tabindex="3">
+                                                                        Delete
+                                                                        </a><!--
+                                                                        --><!-- mobilelabel_my_choice_id -->
+                                                                        <div name="mobilelabel_my_choice_id" id="MyOrders_mobilelabel_my_choice_id" dsid="mobilelabel_my_choice_id"
+                                                                        data-role="appery_label" class="MyOrders_mobilelabel_my_choice_id">
+                                                                            id
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="MyOrders_mobilefooter1" name="mobilefooter1"
+            dsid="mobilefooter1" id="MyOrders_mobilefooter1" data-theme="f">
+                <!-- mobilenavbar_6 -->
+                <div data-role="navbar" id="MyOrders_mobilenavbar_6" name="mobilenavbar_6" dsid="mobilenavbar_6"
+                class="MyOrders_mobilenavbar_6" data-theme="f" style="position: relative;">
+                    <ul>
+                        <!-- favorite_item -->
+                        <li>
+                            <a data-theme="f" data-icon="star" id="MyOrders_favorite_item" dsid="favorite_item"
+                            name="favorite_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- home_item -->
+                        <li>
+                            <a data-theme="f" data-icon="home" id="MyOrders_home_item" dsid="home_item" name="home_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- upload_item -->
+                        <li>
+                            <a data-theme="f" data-icon="action" id="MyOrders_upload_item" dsid="upload_item"
+                            name="upload_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,169 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer1 */
+.ui-content.RecevingSMSCode_mobilecontainer1 {
+	padding: 15px 15px 15px 15px;
+}
+/* mobileworkarea_10*/
+.RecevingSMSCode_mobileworkarea_10 {
+	background-color: transparent;
+	padding: 0px;
+}
+/* mobilebutton_edit */
+#RecevingSMSCode_mobilebutton_edit {
+
+}
+.ui-btn.RecevingSMSCode_mobilebutton_edit {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilelabel_msg */
+.RecevingSMSCode_mobilelabel_msg {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #c02525; text-align: center; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	display: none;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* spacer_13 */
+.RecevingSMSCode_spacer_13 {
+	width: 100%; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* mobilelabel_12 */
+.RecevingSMSCode_mobilelabel_12 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* spacer_14 */
+.RecevingSMSCode_spacer_14 {
+	width: 100%; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* mobiletextinput_activation_code */
+.RecevingSMSCode_mobiletextinput_activation_code {
+	margin: 4px 0px 4px 0px;
+}
+/* spacer_16 */
+.RecevingSMSCode_spacer_16 {
+	width: 100%; height: 34px;
+	margin: 4px 0px 4px 0px;
+}
+/* mobilegrid_18 */
+.RecevingSMSCode_mobilegrid_18 {
+	height: auto;
+	width:100%;
+	margin: 4px 0px 4px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.RecevingSMSCode_mobilegrid_18_wrapper {
+
+}
+.RecevingSMSCode_mobilegrid_18 > tr > td {
+	vertical-align: top;
+}
+.RecevingSMSCode_mobilegrid_18_row_0, .RecevingSMSCode_mobilegrid_18_row_0 > td {
+	height: 30px
+}
+/* mobilegridcell_19 */
+.RecevingSMSCode_mobilegridcell_19 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.RecevingSMSCode_mobilegridcell_19 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_20 */
+.RecevingSMSCode_mobilegridcell_20 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.RecevingSMSCode_mobilegridcell_20 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_25 */
+.RecevingSMSCode_mobilegridcell_25 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.RecevingSMSCode_mobilegridcell_25 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_28 */
+.RecevingSMSCode_mobilegridcell_28 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.RecevingSMSCode_mobilegridcell_28 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilebutton_done */
+#RecevingSMSCode_mobilebutton_done {
+
+}
+.ui-btn.RecevingSMSCode_mobilebutton_done {
+	margin: 4px 5px 4px 5px;
+}
+/* mobilegridcell_29 */
+.RecevingSMSCode_mobilegridcell_29 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.RecevingSMSCode_mobilegridcell_29 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_30 */
+.RecevingSMSCode_mobilegridcell_30 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.RecevingSMSCode_mobilegridcell_30 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilegridcell_31 */
+.RecevingSMSCode_mobilegridcell_31 {
+	height:30px !important;
+	width:auto;
+	padding: 2px 2px 2px 2px;
+}
+.RecevingSMSCode_mobilegridcell_31 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilefooter1 */
+.RecevingSMSCode_mobilefooter1 {
+	min-height:38px;
+}
+/* mobilenavbar_6 */
+.RecevingSMSCode_mobilenavbar_6 {
+
+}
+.RecevingSMSCode_mobilenavbar_6 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .RecevingSMSCode_mobilenavbar_6 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .RecevingSMSCode_mobilenavbar_6 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.RecevingSMSCode_mobilenavbar_6 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

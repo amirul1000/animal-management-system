@@ -1,0 +1,11 @@
+#LimitRequestLine 9114094
+#LimitRequestFieldSize 9114094
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ server.php?_url=/$1 [QSA,L]
+
+
+

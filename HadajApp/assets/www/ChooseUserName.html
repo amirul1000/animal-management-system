@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            ChooseUserName
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="files/views/assets/css/main.css" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-ajaxTransport.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-setitems/localforage-setitems.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/plugins/localforage-find/localforage-find.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/offline/offline.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/favorite.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/profile.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/carriage_orders.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_profile_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/search_home.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/main.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/message.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/element_data.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/scroll.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/keypad.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/chunk_str.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_video.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/upload_photo.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:960px;" dsid="ChooseUserName" id="ChooseUserName"
+        class="type-interior" data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="ChooseUserName_mobileheader1" class="ChooseUserName_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    HadajApp
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="ChooseUserName_mobilecontainer1" name="mobilecontainer1"
+            class="ChooseUserName_mobilecontainer1 ui-content" dsid="mobilecontainer1" data-theme="f">
+                <link href="ChooseUserName.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="ChooseUserName.js">
+                </script>
+                <!-- mobileworkarea_10 -->
+                <div class="ChooseUserName_mobileworkarea_10 ChooseUserName_mobileworkarea_10">
+                    <!-- mobilelabel_msg -->
+                    <div name="mobilelabel_msg" id="ChooseUserName_mobilelabel_msg" dsid="mobilelabel_msg"
+                    data-role="appery_label" class="ChooseUserName_mobilelabel_msg">
+                        Msg
+                    </div>
+                    <!-- mobilegrid_11 -->
+                    <div class="ChooseUserName_mobilegrid_11_wrapper" data-wrapper-for="mobilegrid_11">
+                        <table id="ChooseUserName_mobilegrid_11" class="ChooseUserName_mobilegrid_11" dsid="mobilegrid_11"
+                        name="mobilegrid_11" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="ChooseUserName_mobilegrid_11_row_0">
+                                <!-- mobilegridcell_12 -->
+                                <td id="ChooseUserName_mobilegridcell_12" name="mobilegridcell_12" class="ChooseUserName_mobilegridcell_12"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_23 -->
+                                        <div name="mobilelabel_23" id="ChooseUserName_mobilelabel_23" dsid="mobilelabel_23"
+                                        data-role="appery_label" class="ChooseUserName_mobilelabel_23">
+                                            Nike Name
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_13 -->
+                                <td id="ChooseUserName_mobilegridcell_13" name="mobilegridcell_13" class="ChooseUserName_mobilegridcell_13"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobiletextinput_nike_name -->
+                                        <div data-role="fieldcontain" class="ChooseUserName_mobiletextinput_nike_name ">
+                                            <input type="text" name="mobiletextinput_nike_name" dsid="mobiletextinput_nike_name"
+                                            value="" placeholder="Nike  Name" id="ChooseUserName_mobiletextinput_nike_name" tabindex="2"
+                                            multiple data-theme="f" class="ChooseUserName_mobiletextinput_nike_name" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="ChooseUserName_mobilegrid_11_row_1">
+                                <!-- mobilegridcell_14 -->
+                                <td id="ChooseUserName_mobilegridcell_14" name="mobilegridcell_14" class="ChooseUserName_mobilegridcell_14"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_24 -->
+                                        <div name="mobilelabel_24" id="ChooseUserName_mobilelabel_24" dsid="mobilelabel_24"
+                                        data-role="appery_label" class="ChooseUserName_mobilelabel_24">
+                                            Username
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_15 -->
+                                <td id="ChooseUserName_mobilegridcell_15" name="mobilegridcell_15" class="ChooseUserName_mobilegridcell_15"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobiletextinput_username -->
+                                        <div data-role="fieldcontain" class="ChooseUserName_mobiletextinput_username ">
+                                            <input type="text" name="mobiletextinput_username" dsid="mobiletextinput_username"
+                                            value="" placeholder="Username" id="ChooseUserName_mobiletextinput_username" tabindex="3"
+                                            multiple data-theme="f" class="ChooseUserName_mobiletextinput_username" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- mobilelabel_16 -->
+                    <div name="mobilelabel_16" id="ChooseUserName_mobilelabel_16" dsid="mobilelabel_16"
+                    data-role="appery_label" class="ChooseUserName_mobilelabel_16">
+                        If you want to get Delivery Driver job,We suggest You to provide your first and
+                        last name for more protection.Your information will be shown for the users
+                    </div>
+                    <!-- mobilegrid_17 -->
+                    <div class="ChooseUserName_mobilegrid_17_wrapper" data-wrapper-for="mobilegrid_17">
+                        <table id="ChooseUserName_mobilegrid_17" class="ChooseUserName_mobilegrid_17" dsid="mobilegrid_17"
+                        name="mobilegrid_17" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="ChooseUserName_mobilegrid_17_row_0">
+                                <!-- mobilegridcell_18 -->
+                                <td id="ChooseUserName_mobilegridcell_18" name="mobilegridcell_18" class="ChooseUserName_mobilegridcell_18"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_25 -->
+                                        <div name="mobilelabel_25" id="ChooseUserName_mobilelabel_25" dsid="mobilelabel_25"
+                                        data-role="appery_label" class="ChooseUserName_mobilelabel_25">
+                                            First Name
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_19 -->
+                                <td id="ChooseUserName_mobilegridcell_19" name="mobilegridcell_19" class="ChooseUserName_mobilegridcell_19"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobiletextinput_first_name -->
+                                        <div data-role="fieldcontain" class="ChooseUserName_mobiletextinput_first_name ">
+                                            <input type="text" name="mobiletextinput_first_name" dsid="mobiletextinput_first_name"
+                                            value="" placeholder="First Name" id="ChooseUserName_mobiletextinput_first_name"
+                                            tabindex="4" multiple data-theme="f" class="ChooseUserName_mobiletextinput_first_name"
+                                            />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="ChooseUserName_mobilegrid_17_row_1">
+                                <!-- mobilegridcell_20 -->
+                                <td id="ChooseUserName_mobilegridcell_20" name="mobilegridcell_20" class="ChooseUserName_mobilegridcell_20"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilelabel_26 -->
+                                        <div name="mobilelabel_26" id="ChooseUserName_mobilelabel_26" dsid="mobilelabel_26"
+                                        data-role="appery_label" class="ChooseUserName_mobilelabel_26">
+                                            Last name
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_21 -->
+                                <td id="ChooseUserName_mobilegridcell_21" name="mobilegridcell_21" class="ChooseUserName_mobilegridcell_21"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobiletextinput_last_name -->
+                                        <div data-role="fieldcontain" class="ChooseUserName_mobiletextinput_last_name ">
+                                            <input type="text" name="mobiletextinput_last_name" dsid="mobiletextinput_last_name"
+                                            value="" placeholder="Last Name" id="ChooseUserName_mobiletextinput_last_name" tabindex="5"
+                                            multiple data-theme="f" class="ChooseUserName_mobiletextinput_last_name" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- mobilegrid_32 -->
+                    <div class="ChooseUserName_mobilegrid_32_wrapper" data-wrapper-for="mobilegrid_32">
+                        <table id="ChooseUserName_mobilegrid_32" class="ChooseUserName_mobilegrid_32" dsid="mobilegrid_32"
+                        name="mobilegrid_32" cellpadding=0 cellspacing=0>
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <tr class="ChooseUserName_mobilegrid_32_row_0">
+                                <!-- mobilegridcell_33 -->
+                                <td id="ChooseUserName_mobilegridcell_33" name="mobilegridcell_33" class="ChooseUserName_mobilegridcell_33"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_34 -->
+                                <td id="ChooseUserName_mobilegridcell_34" name="mobilegridcell_34" class="ChooseUserName_mobilegridcell_34"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_43 -->
+                                <td id="ChooseUserName_mobilegridcell_43" name="mobilegridcell_43" class="ChooseUserName_mobilegridcell_43"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_44 -->
+                                <td id="ChooseUserName_mobilegridcell_44" name="mobilegridcell_44" class="ChooseUserName_mobilegridcell_44"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                        <!-- mobilebutton_save --><!--
+                                        --><a data-role="button" name="mobilebutton_save" dsid="mobilebutton_save" class="ChooseUserName_mobilebutton_save"
+                                        id="ChooseUserName_mobilebutton_save" data-corners="true" data-icon="plus" data-iconpos="left"
+                                        x-apple-data-detectors="false" data-inline="true" data-mini="false" data-theme="a"
+                                        tabindex="1">
+                                        Save
+                                        </a>
+                                    </div>
+                                </td>
+                                <!-- mobilegridcell_45 -->
+                                <td id="ChooseUserName_mobilegridcell_45" name="mobilegridcell_45" class="ChooseUserName_mobilegridcell_45"
+                                colspan=1 rowspan=1>
+                                    <div class="cell-wrapper">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class="ChooseUserName_mobilefooter1"
+            name="mobilefooter1" dsid="mobilefooter1" id="ChooseUserName_mobilefooter1" data-theme="f">
+                <!-- mobilenavbar_6 -->
+                <div data-role="navbar" id="ChooseUserName_mobilenavbar_6" name="mobilenavbar_6"
+                dsid="mobilenavbar_6" class="ChooseUserName_mobilenavbar_6" data-theme="f" style="position: relative;">
+                    <ul>
+                        <!-- favorite_item -->
+                        <li>
+                            <a data-theme="f" data-icon="star" id="ChooseUserName_favorite_item" dsid="favorite_item"
+                            name="favorite_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- home_item -->
+                        <li>
+                            <a data-theme="f" data-icon="home" id="ChooseUserName_home_item" dsid="home_item"
+                            name="home_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                        <!-- upload_item -->
+                        <li>
+                            <a data-theme="f" data-icon="action" id="ChooseUserName_upload_item" dsid="upload_item"
+                            name="upload_item">
+                            &nbsp;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
